@@ -1,0 +1,118 @@
+{
+  "@context": [
+      "https://opensource.ieee.org/rcd/v2021.json",
+          {
+            "@version": 1.1,
+            "@protected": true,
+
+            "id": "@id",
+            "type": "@type",
+
+            "competencyDefinition": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#competencyDefinition",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",
+                    "text": "schema:Text",
+       	   	  "referenceCode": "schema:Text",
+                    "name": "schema:description",
+        		    "typeUrl": "schema:url",
+        		    "typeLabel": "schema:Text",
+       		     "hasPart" : "schema:url",
+         	       "isSupportedBy" : "schema:url",
+          		  "Requires" : "schema:url",
+                    "competencyFramework": "https://opensource.ieee.org/rcd/v2021.json#competencyFramework",
+                    "competencyAssociation": "https://opensource.ieee.org/rcd/v2021.json#competencyAssociation",
+                    "rubricCriterion": "https://opensource.ieee.org/rcd/v2021.json#rubric"
+                }
+            },
+
+            "competencyFramework": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#competencyFramework",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",  
+                    "name": "schema:name",
+                    "authoritativeSource": "schema:url",
+                    "competencyDefinition": "https://opensource.ieee.org/rcd/v2021.json#competencyDefinition",
+                    "competencyAssociation": "https://opensource.ieee.org/rcd/v2021.json#competencyAssociation"
+                }
+            },
+
+            "competencyAssociation": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#competencyAssociation",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",
+                    "associationType": "schema:Text",
+                    "source": "schema:url",
+                    "destination": "schema:url",
+                    "weight": "schema:Number"
+                }
+            },
+
+            "rubric": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#rubric",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",
+                      
+                    "name": "schema:name",
+                    "description": "schema:description",
+		            "method": "How to specify controlled vocab here for manual or automatic????",
+                    "rubricCriterion": "https://opensource.ieee.org/rcd/v2021.json#rubricCriterion"
+                }
+            },
+                
+            "rubricCriterion": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#rubricCriterion",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",
+                    
+                    "name": "schema:name",
+                    "category": "schema:category",
+                    "description": "schema:description",
+                    "position": "schema:Integer",
+                    "weight": "schema:Number",
+                    "rubricCriterionLevel": "https://opensource.ieee.org/rcd/v2021.json#rubricCriterionLevel"
+                }
+            },
+                
+            "rubricCriterionLevel": {
+                "@id": "https://opensource.ieee.org/rcd/v2021.json#rubricCriterionLevel",
+                "@context": {
+                    "@version": 1.0,
+                    "@protected": true,
+
+                    "id": "@id",
+                    "type": "@type",
+                    "schema": "http://schema.org/",
+                    
+                    "name": "schema:name",
+                    "description": "schema:description",
+                    "feedback": "schema:Text",
+                    "position": "schema:Integer",
+                    "score": "schema:Number"
+                }
+            }
+        }
+    ]
+}
