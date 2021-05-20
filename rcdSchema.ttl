@@ -1,0 +1,200 @@
+@prefix ceds: <https://ceds.ed.gov/element/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rcd: <https://opensource.ieee.org/rcd/v2021.json#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+    
+rcd:CompetencyAssociation a rdfs:Class ;
+    rdfs:label "CompetencyAssociation"@en-US ;
+    rdfs:comment """The relation of competency definitions to other competency definitions and/or competency 
+        frameworks to competency frameworks to support competency maps or competency sub frameworks or linked 
+        controlled vocabulary terms as metadata to further define a competency definition."""@en-US .
+    
+rcd:CompetencyDefinition a rdfs:Class ;
+    rdfs:label "Competency Definition"@en-US ;
+    rdfs:comment "A resource that includes text that describes a capability or behavior that an actor (person, team, organization) may learn or be able to do within a given situation and environment along with definitions of the potential levels of competence, the mastery threshold, and metadata related to that statement."@en-US .
+
+rcd:CompetencyFramework a rdfs:Class ;
+    rdfs:label "Competency Framework"@en-US ;
+    rdfs:comment "A collection of Competency Definition items and/or Competency Associations, and/or metadata."@en-US .
+ 
+rcd:Rubric a rdfs:Class ;
+    rdfs:label "Rubric"@en-US ;
+    rdfs:comment "A rubric is a set of criteria or indicators that assist in determining whether an entity possesses a given competence or a level of competence in a task or work product. A rubric may have one or more RubricCriterion."@en-US ;
+    skos:note: "Non-normative notes: \n\nThe optional property schema.org/additionalType may be used to specify a type of rubric, e.g. \"analytic\", \"developmental\", \"checklist\", \"holistic\".\n\n A typical holistic rubric would require one rubricCriterion with more than one rubricCriterionLevel. A typical analytic rubric would require more than one rubricCriterion with each having more than one rubricCriterionLevel.\n\nTo support cataloging or search for rubrics when there are more than one version use startDate, endDate, version, replaces, isReplacedBy optional properties. (See 5.7.)"@en-US .
+    
+rcd:RubricCriterion a rdfs:Class ;
+    rdfs:label "Rubric Criterion"@en-US ;
+    rdfs:comment "A single criterion by which one aspect of an entity’s competence may be evaluated. Points to any number of RubricCriterionLevels."@en-US . 
+
+rcd:RubricCriterionLevel a rdfs:Class ;
+    rdfs:label "CriterionLevel"@en-US ;
+    rdfs:comment "A level of competence."@en-US .
+    
+rcd:authoritativeSource a rdf:Property ;
+    rdfs:label "Authoritative Source"@en-US ;
+    rdfs:comment "The original competency framework which this resource is based on or derived from."@en-US ;
+    schema:domainIncludes rcd:CompetencyFramework ;
+    schema:rangeIncludes schema:URL .
+    
+rcd:category a rdf:Property ;
+    rdfs:label "Category"@en-US ;
+    rdfs:comment "A textual label for the category by which rubricCriterion may be grouped."@en-US ;
+    schema:domainIncludes rcd:RubricCriterion ;
+    schema:rangeIncludes rdf:langString .
+          
+rcd:competencyAssociation a rdf:Property ;
+    rdfs:label "Competency Assosiation"@en-US ;
+    rdfs:comment "Collection of Competency_Associations that relate this RCD to other objects."@en-US ;
+    skos:note "This supports Semantic Web use cases allowing the Competency_Definitions to specify relationships between itself and other Competency_Definitions in a graph or to other objects. This provides utility for open web uses in which Competency_Definitions exist outside of the context of a specific framework.\n\nNOTE: When competencyDefinition is used within the context of a competencyFramework the competencyAssociations within the framework are authoritative and override associations specified here. "@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyAssociation .
+
+rcd:competencyFramework a rdf:Property ;
+    rdfs:label "Competency Framework"@en-US ;
+    rdfs:comment "URIs to competency framework(s) to which this competency item may belong."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyFramework .
+    
+ceds:000869#ConformsTo a rdf:Property, skos:concept ;
+    rdfs:label "Conforms To"@en-US ;
+    rdfs:comment "This definition conforms to an established standard (or regulation) that the destination defines."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyDefinition .
+
+rcd:description a rdf:Property ;
+    rdfs:label "Description"@en-US ;
+    rdfs:comment "A description of the item."@en-US ;
+    schema:domainIncludes 
+        rcd:Rubric,
+        rcd:RubricCriterion,
+        rcd:RubricCriterionLevel ;
+    schema:rangeIncludes rdf:langString .
+    
+rcd:feedback a rdf:Property ;
+    rdfs:label "Feedback"@en-US ;
+    rdfs:comment "Predefined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development."@en-US ;
+    schema:domainIncludes rcd:RubricCriterionLevel ;
+    schema:rangeIncludes rdf:langString .
+    
+rcd:hasPart a rdf:Property, skos:Concept ;
+    rdfs:label "Has Part"@en-US ;
+    rdfs:comment "The destination competence or category is a part of the competence or category defined in this object. (Same as skos:broader.)"@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyDefinition .   
+ 
+rcd:id a rdf:Property ;
+    rdfs:label "ID"@en-US ;
+    rdfs:comment "A globally unique uri that allows a system to retrieve or reference the competency definition."@en-US ;
+    skos:note "In a JSON-LD serialization, this will  @id."@en ; 
+    schema:domainIncludes 
+        rcd:CompetencyDefinition,
+        rcd:CompetencyFramework,
+        rcd:CompetencyAssociation,
+        rcd:Rubric,
+        rcd:RubricCriterion,
+        rcd:RubricCriterionLevel ;
+    schema:rangeIncludes schema:URL .
+          
+rcd:isSupportedBy a rdf:Property  ;
+    rdfs:label "Is Supported By"@en-US ;
+    rdfs:comment "The destination competence or category supports the ability to do or learn the competence or category defined in this object."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyDefinition .
+    
+rcd:method a rdf:Property ;
+    rdfs:label "Method"@en-US ;
+    rdfs:comment "Indicates if the rubric is designed for manual or automated evaluation of a proficiency level."@en-US ;
+    schema:domainIncludes rcd:Rubric ;
+    schema:rangeIncludes rdf:langString . 
+    
+rcd:name a rdf:Property ;
+    rdfs:label "Name"@en-US ;
+    rdfs:comment "Short name or label for the competency definition or its node in a competency framework. (schema.org/name)"@en-US ;
+    skos:note "This optional data element is a text representing a short name or label for the competency definition or its node in a competency framework.\n\nNOTE—This data element may be expressed in multiple languages. Each translation is represented by an instantiation of langstring_type."@en-US ;
+    schema:domainIncludes 
+        rcd:CompetencyDefinition,
+        rcd:CompetencyFramework,
+        rcd:Rubric,
+        rcd:RubricCriterion,
+        rcd:RubricCriterionLevel ;
+    schema:rangeIncludes rdf:langString .
+    
+rcd:position a rdf:Property ;
+    rdfs:label "Position"@en-US ;
+    rdfs:comment "A numeric value representing this criterion's ordinal position in the criteria list for this rubric."@en-US ;
+    schema:domainIncludes 
+        rcd:RubricCriterion,
+        rcd:RubricCriterionLevel ;
+    schema:rangeIncludes xsd:nonNegativeInteger . 
+    
+rcd:referenceCode a rdf:Property ;
+    rdfs:label "Reference Code"@en-US ;
+    rdfs:comment "A human-readable identifier."@en-US ;
+    dct:description "This optional data element is a human-decipherable identifier for the competency_definition_statement. This supports a legacy practice by some competency framework developers of defining a human decipherable coding scheme that reflects the item’s position in a competencyFramework structure. For example, a competency_definition in a hierarchy of: subject=Mathematics, category=Geometry, strand=Circles, sub-strand=Arcs; a competency_definition_code may have a value such as \"Math.G.C.A.2.\""@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rdf:langString .
+    
+rcd:requires a rdf:Property, skos:Concept ;
+    rdfs:label "Requires"@en-US ;
+    rdfs:comment "The destination competence is pre-requisite {essential} before having the ability to do or learn the competence or category defined in this object."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:CompetencyDefinition .    
+    
+rcd:rubric a rdf:Property ;
+    rdfs:label "Rubrics"@en-US ;
+    rdfs:comment "Collection of rubric objects."@en-US ;
+    skos:note "This is a pointer to a complex object that has other structures within it like rubric criterion and criterion level."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rcd:Rubric .
+    
+rcd:rubricCriterion a rdf:Property ;
+    rdfs:label "Rubric Criterion"@en-US ;
+    rdfs:comment "Url(s) of one or more rubricCriterion objects."@en-US ;
+    schema:domainIncludes rcd:Rubric ;
+    schema:rangeIncludes rcd:RubricCriterion .
+    
+rcd:rubricCriterionLevel a rdf:Property ;
+    rdfs:label "Rubric Criterion Level"@en-US ;
+    rdfs:comment "Url(s) of one or more rubricCriterionLevel objects."@en-US ;
+    schema:domainIncludes rcd:RubricCriterion ;
+    schema:rangeIncludes rcd:RubricCriterionLevel .
+
+rcd:score a rdf:Property ;
+    rdfs:label "Score"@en-US ;
+    rdfs:comment "The points awarded for achieving this level."@en-US ;
+    schema:domainIncludes rcd:RubricCriterionLevel ;
+    skos:note: "Numeric - up to 3 digits after decimal"@en-US ;
+    schema:rangeIncludes xsd:decimal .
+            
+rcd:text a rdf:Property ;
+    rdfs:label "Text"@en-US ;
+    rdfs:comment "A text statement of the competency."@en-US ;
+    skos:note "This mandatory data element is an unstructured, textual transcription of a competency definition. This data element may be expressed in multiple languages."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rdf:langString .
+
+rcd:typeLabel a rdf:Property ;
+    rdfs:label "Type Label"@en-US ;
+    rdfs:comment "A human readable label for the type, class, or category of the competency. That class may indicate the competency definition’s level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\")."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes rdf:langString .
+       
+rcd:typeUrl a rdf:Property ;
+    rdfs:label "Type URL"@en-US ;
+    rdfs:comment "A globally unique identifier for the type, class, or category of the competency. That class may indicate the competency definition’s level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\"). It is a URI that may be a resolvable URL to competency_framework metadata in linked data implementations."@en-US ;
+    schema:domainIncludes rcd:CompetencyDefinition ;
+    schema:rangeIncludes schema:URL .
+    
+rcd:weight a rdf:Property ;
+    rdfs:label "Weight"@en-US ;
+    rdfs:comment "Indicates the relative significance this connection has for the destination node in a learning map."@en-US ;
+    schema:domainIncludes 
+        rcd:CompetencyAssociation,
+        rcd:RubricCriterion ;
+    schema:rangeIncludes xsd:decimal .
+    
