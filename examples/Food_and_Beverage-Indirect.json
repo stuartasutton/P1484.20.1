@@ -58,7 +58,6 @@
             "competencyAssociation": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
             "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"   
         },
-        
         {
             "id": "https://example.org/resources/83fc02b0-1ed3-4536-999e-b81245e04f09",
             "type": "rcd:CompetencyAssociation",
