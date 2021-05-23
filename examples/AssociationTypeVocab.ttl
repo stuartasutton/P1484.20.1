@@ -1,0 +1,39 @@
+@prefix rcd: <https://opensource.ieee.org/rcd/v2021/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+rcd:AssociationType a skos:ConceptScheme ;
+    rdfs:name "Association Type Vocabulary"@en-US ;
+    rdfs:comment "Types of associations defining relationships between two resources."@en-US ;
+    skos:hasTopConcept rcd:conformsTo, rcd:hasPart, rcd:hasSubframework, rcd:isSupportedBy, rcd:requires .
+
+rcd:conformsTo a skos:Concept, rdf:Property ;
+    skos:prefLabel "Conforms To"@en-US ;
+    skos:definition "This source conforms to an established standard or regulation identified by the destination."@en-US ;
+    skos:inScheme rcd:AssociationType ;
+    skos:topConceptOf rcd:AssociationType .
+
+rcd:hasPart a skos:Concept, rdf:Property ;
+    skos:prefLabel "Has Part"@en-US ;
+    skos:definition "The destination competence is a part of the competence defined in the source."@en-US ;
+    skos:inScheme rcd:AssociationType ;
+    skos:topConceptOf rcd:AssociationType .
+    
+rcd:hasSubframework a skos:Concept, rdf:Property ;
+    skos:prefLabel "Has Subframework"@en-US ;
+    skos:definition "The source framework has a subframework identified by the destination."@en-US ;
+    skos:inScheme rcd:AssociationType ;
+    skos:topConceptOf rcd:AssociationType .
+    
+rcd:isSupportedBy a skos:Concept, rdf:Property ;
+    skos:prefLabel "Is Supported By"@en-US ;
+    skos:definition "The destination competence supports the ability to do or learn the source competence."@en-US ;
+    skos:inScheme rcd:AssociationType ;
+    skos:topConceptOf rcd:AssociationType .
+    
+rcd:requires a skos:Concept, rdf:Property ;
+    skos:prefLabel "Requires"@en-US ;
+    skos:definition "The destination competence is essential before having the ability to do or learn the source competence."@en-US ;
+    skos:inScheme rcd:AssociationType ;
+    skos:topConceptOf rcd:AssociationType .
