@@ -1,0 +1,78 @@
+{
+    "@context": {
+        "rcd": "https://opensource.ieee.org/rcd/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "skos:",
+        "id": "@id",
+        "type": "@type"
+    },
+    "@graph": 
+        [
+            {
+                "id": "rcd:AssociationType" ,
+                "type": "skos:ConceptScheme" ,
+                "rdf:comment": {"en-US": "Types of associations defining relationships between two resources."} ,
+                "rcd:name": {"en-US": "Association Type Vocabulary"} ,
+                "skos:hasTopConcept": [
+                    "rcd:conformsTo" ,
+                    "rcd:hasPart" ,
+                    "rcd:hasSubframework" ,
+                    "rcd:isSupportedBy" ,
+                    "rcd:requires" 
+                ]
+            },
+            {
+                "id": "rcd:requires",
+                "type": ["skos:Concept", "rdf:Property"],
+                "skos:prefLabel": {"en-US": "requires"} ,
+                "skos:definition": {"en-US": "The destination competence is essential before having the ability to do or learn the source competence." },
+                "skos:inScheme": "rcd:AssociationType" ,
+                "skos:topConceptOf": "rcd:AssociationType" 
+            },
+            {
+                "id": "rcd:conformsTo",
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "conformsTo"} ,
+                "skos:definition": {"en-US": "This source conforms to an established standard or regulation identified by the destination."} ,
+                "skos:inScheme": "rcd:AssociationType" ,
+                "skos:topConceptOf": "rcd:AssociationType"
+            },
+            {
+                "id": "rcd:isSupportedBy" ,
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "isSupportedBy"} ,
+                "skos:definition": {"en-US": "The destination competence supports the ability to do or learn the source competence."}  ,
+                "skos:inScheme": "rcd:AssociationType" ,
+                "skos:topConceptOf": "rcd:AssociationType"
+            },
+            {
+                "id": "rcd:hasSubframework" ,
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "hasSubframework"} ,
+                "skos:definition": {"en-US": "The source framework has a subframework identified by the destination."} ,
+                "skos:inScheme": "rcd:AssociationType",
+                "skos:topConceptOf": "rcd:AssociationType"
+            } ,
+            {
+                "id": "rcd:hasPart",
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "hasPart"} ,
+                "skos:definition": {"en-US": "The destination competence is a part of the competence defined in the source."} ,
+                "skos:inScheme": "rcd:AssociationType",
+                "skos:topConceptOf": "rcd:AssociationType"
+            }
+        ]
+}
