@@ -29,19 +29,22 @@
             "hasPart": [
                 "https://example.org/resources/4af757ed-1b66-4627-ac37-62b7e4e5f383",
                 "https://example.org/resources/c42c4c38-c995-43f8-94b2-a4d6b60121ec"
-            ]    
+            ],
+            "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"    
         },
         {
             "id": "https://example.org/resources/4af757ed-1b66-4627-ac37-62b7e4e5f383",
             "type": "rcd:CompetencyDefinition" ,
             "competencyStatement": { "en-us": "Interpersonal Skills"} ,
-            "description": { "en-us": "Displaying the skills to work effectively with others from diverse backgrounds."}    
+            "description": { "en-us": "Displaying the skills to work effectively with others from diverse backgrounds."},
+            "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"    
         },
         {
             "id": "https://example.org/resources/c42c4c38-c995-43f8-94b2-a4d6b60121ec",
             "type": "rcd:CompetencyDefinition" ,
             "competencyStatement": { "en-us": "Integrity"} ,
-            "description": { "en-us": "Displaying strong business and work ethics."}   
+            "description": { "en-us": "Displaying strong business and work ethics."},
+            "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"
         }
     ]
 }
