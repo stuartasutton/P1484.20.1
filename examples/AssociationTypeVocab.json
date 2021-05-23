@@ -24,7 +24,10 @@
             },
             {
                 "id": "rcd:requires",
-                "type": ["skos:Concept", "rdf:Property"],
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
                 "skos:prefLabel": {"en-US": "requires"} ,
                 "skos:definition": {"en-US": "The destination competence is essential before having the ability to do or learn the source competence." },
                 "skos:inScheme": "rcd:AssociationType" ,
