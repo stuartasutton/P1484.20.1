@@ -18,11 +18,13 @@ rcd:hasPart a skos:Concept, rdf:Property ;
     skos:prefLabel "Has Part"@en-US ;
     skos:definition "The destination competence is a part of the competence defined in the source."@en-US ;
     skos:inScheme rcd:AssociationType ;
+    skos:note "This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness  is part of a \"skill\" definition."@en-US ;
     skos:topConceptOf rcd:AssociationType .
     
 rcd:hasSubframework a skos:Concept, rdf:Property ;
     skos:prefLabel "Has Subframework"@en-US ;
     skos:definition "The source framework has a subframework identified by the destination."@en-US ;
+    skos:note "The \"hasSubframework\" property shall not be used unless both \"source\" and \"destination\" are competencyFrameworks."@en-US ;
     skos:inScheme rcd:AssociationType ;
     skos:topConceptOf rcd:AssociationType .
     
