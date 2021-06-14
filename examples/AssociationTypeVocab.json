@@ -23,17 +23,6 @@
                 ]
             },
             {
-                "id": "rcd:requires",
-                "type": [
-                    "rdf:Property", 
-                    "skos:Concept"
-                 ] ,
-                "skos:prefLabel": {"en-US": "requires"} ,
-                "skos:definition": {"en-US": "The destination competence is essential before having the ability to do or learn the source competence." },
-                "skos:inScheme": "rcd:AssociationType" ,
-                "skos:topConceptOf": "rcd:AssociationType" 
-            },
-            {
                 "id": "rcd:conformsTo",
                 "type": [
                     "rdf:Property", 
@@ -42,6 +31,30 @@
                 "skos:prefLabel": {"en-US": "conformsTo"} ,
                 "skos:definition": {"en-US": "This source conforms to an established standard or regulation identified by the destination."} ,
                 "skos:inScheme": "rcd:AssociationType" ,
+                "skos:topConceptOf": "rcd:AssociationType"
+            },
+            {
+                "id": "rcd:hasPart",
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "hasPart"} ,
+                "skos:definition": {"en-US": "The destination competence is a part of the competence defined in the source."} ,
+                "skos:note": {"en-US": "This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness  is part of a \"skill\" definition."} ,
+                "skos:inScheme": "rcd:AssociationType",
+                "skos:topConceptOf": "rcd:AssociationType"
+            },
+            {
+                "id": "rcd:hasSubframework" ,
+                "type": [
+                    "rdf:Property", 
+                    "skos:Concept"
+                 ] ,
+                "skos:prefLabel": {"en-US": "hasSubframework"} ,
+                "skos:definition": {"en-US": "The source framework has a subframework identified by the destination."} ,
+                "skos:note": {"en-US": "The \"hasSubframework\" property shall not be used unless both \"source\" and \"destination\" are competencyFrameworks."} ,
+                "skos:inScheme": "rcd:AssociationType",
                 "skos:topConceptOf": "rcd:AssociationType"
             },
             {
@@ -56,28 +69,15 @@
                 "skos:topConceptOf": "rcd:AssociationType"
             },
             {
-                "id": "rcd:hasSubframework" ,
+                "id": "rcd:requires",
                 "type": [
                     "rdf:Property", 
                     "skos:Concept"
                  ] ,
-                "skos:prefLabel": {"en-US": "hasSubframework"} ,
-                "skos:definition": {"en-US": "The source framework has a subframework identified by the destination."} ,
-                "skos:note": {"en-US": "The \"hasSubframework\" property shall not be used unless both \"source\" and \"destination\" are competencyFrameworks."} ,
-                "skos:inScheme": "rcd:AssociationType",
-                "skos:topConceptOf": "rcd:AssociationType"
-            } ,
-            {
-                "id": "rcd:hasPart",
-                "type": [
-                    "rdf:Property", 
-                    "skos:Concept"
-                 ] ,
-                "skos:prefLabel": {"en-US": "hasPart"} ,
-                "skos:definition": {"en-US": "The destination competence is a part of the competence defined in the source."} ,
-                "skos:note": {"en-US": "This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness  is part of a \"skill\" definition."} ,
-                "skos:inScheme": "rcd:AssociationType",
-                "skos:topConceptOf": "rcd:AssociationType"
-            }
+                "skos:prefLabel": {"en-US": "requires"} ,
+                "skos:definition": {"en-US": "The destination competence is essential before having the ability to do or learn the source competence." },
+                "skos:inScheme": "rcd:AssociationType" ,
+                "skos:topConceptOf": "rcd:AssociationType" 
+            } 
         ]
 }
