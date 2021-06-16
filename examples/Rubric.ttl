@@ -1,0 +1,102 @@
+@prefix rcd: <https://opensource.ieee.org/rcd/v2021/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
+
+ex:43bb17c7-34db-425c-8699-4f3c4078833f a rcd:Rubric ;
+    rcd:name "Project Rubric (analytic)"@en-US ;
+    rcd:description "This rubric is used to evaluate a learner's performance on the project and the quality of the resulting work."@en-US ;
+    rcd:method "Manual"@en-US ;
+    rcd:rubricCriterion ex:2988a9d3-2e4e-4294-8281-83f33f4ea12b, 
+        ex:a941bade-ae8a-484a-9d11-52390383bc09,
+        ex:905ea965-275d-4dff-8b62-dd0b1cd562c3 .
+        
+ex:a941bade-ae8a-484a-9d11-52390383bc09 a rcd:RubricCriterion ;
+    rcd:name "Has a plan for investigation"@en-US ;
+    rcd:description "The student turns in a written plan for investigation."@en-US ;
+    rcd:weight "1" ;
+    rcd:position "1" ;
+    rcd:rubricCriterionLevel ex:cf30a808-691a-449c-aedf-4f7d9275b477 ,
+        ex:4539b00b-9aeb-4b88-97c2-b927c9d22422,
+        ex:e4894f82-018a-4a92-abbe-9ad0ce450e90,
+        ex:049f2927-392c-4f76-ae52-814222ffdeaa .
+    
+ex:2988a9d3-2e4e-4294-8281-83f33f4ea12b a rcd:RubricCriterion ;
+    rcd:name "Use of materials"@en-US ;
+    rcd:description "The student manages materials responsibly."@en-US ;
+    rcd:weight ".5" ;
+    rcd:position "2" ;
+    rcd:rubricCriterionLevel ex:3173d050-e7bd-45d5-8dcd-8ed1cc6d76e9,
+        ex:1f35a8aa-64d0-4808-a30f-fb136ac98eed ,
+        ex:e4fe9d2f-577c-4be1-ac75-ae5d766d307d ,
+        ex:1f8b3a36-0e5d-47d5-81b3-e4cf3aedc44f .
+
+ex:905ea965-275d-4dff-8b62-dd0b1cd562c3 a rcd:RubricCriterion ;
+    rcd:name "Collects the data"@en-US ;
+    rcd:description "The student collects and accurately records a sufficient number of data points."@en-US ;
+    rcd:weight "1.5" ;
+    rcd:rubricCriterionLevel ex:0daea46c-7184-4ae3-8993-395fa15335d1 ,
+        ex:4ade2411-d4af-4d40-8aae-10f7ea97d599 ,
+        ex:bfff24a2-2e26-42d2-bc64-2ed233ee3944 ,
+        ex:f6e6c40c-c36e-4192-88a1-8572c4d591d8 .
+        
+ex:cf30a808-691a-449c-aedf-4f7d9275b477 a rcd:RubriCriterionLevel ;
+    rcd:description "The plan is thorough"@en-US ;
+    rcd:score "4"^^xsd:decimal ;
+    rcd:position "1"^^xsd:integer .
+
+ex:4539b00b-9aeb-4b88-97c2-b927c9d22422 a rcd:RubriCriterionLevel ;
+    rcd:description "The plan is missing a few details"@en-US ;
+    rcd:score "3"^^xsd:decimal ;
+    rcd:position "2"^^xsd:integer . 
+
+ex:e4894f82-018a-4a92-abbe-9ad0ce450e90 a rcd:RubriCriterionLevel ;
+    rcd:description "The plan is missing significant details"@en-US ;
+    rcd:score "2"^^xsd:decimal ;
+    rcd:position "3"^^xsd:integer .
+
+ex:049f2927-392c-4f76-ae52-814222ffdeaa a rcd:RubriCriterionLevel ;
+    rcd:description "The plan is limited"@en-US ;
+    rcd:score "1"^^xsd:decimal ;
+    rcd:position "4" .
+    
+ex:3173d050-e7bd-45d5-8dcd-8ed1cc6d76e9 a rcd:RubriCriterionLevel ;
+    rcd:description "Manages all materials responsibly"@en-US ;
+    rcd:score "4"^^xsd:decimal ;
+    rcd:position "1"^^xsd:integer .
+
+ex:1f35a8aa-64d0-4808-a30f-fb136ac98eed a rcd:RubriCriterionLevel ;
+    rcd:description "Uses the materials responsibly most of the time"@en-US ;
+    rcd:score "3"^^xsd:decimal ;
+    rcd:position "2"^^xsd:integer .
+
+ex:e4fe9d2f-577c-4be1-ac75-ae5d766d307d a rcd:RubriCriterionLevel ;
+    rcd:description "Mishandles some of the materials"@en-US ;
+    rcd:score "2"^^xsd:decimal ;
+    rcd:position "3"^^xsd:integer .
+
+ex:1f8b3a36-0e5d-47d5-81b3-e4cf3aedc44f a rcd:RubriCriterionLevel ;
+    rcd:description "Does not use materials properly"@en-US ;
+    rcd:score "1"^^xsd:decimal ;
+    rcd:position "4"^^xsd:integer .
+    
+ex:0daea46c-7184-4ae3-8993-395fa15335d1 a rcd:RubriCriterionLevel ;
+    rcd:description "Data quality and collection methods exceeds the requirements for the investigation"@en-US ;
+    rcd:score "4"^^xsd:decimal ;
+    rcd:position "1"^^xsd:integer .
+ 
+ex:4ade2411-d4af-4d40-8aae-10f7ea97d599 a rcd:RubriCriterionLevel ;
+    rcd:description "Data quality and collection methods are sufficient for the investigation "@en-US ;
+    rcd:score "3"^^xsd:decimal ;
+    rcd:position "2" .
+         
+ex:bfff24a2-2e26-42d2-bc64-2ed233ee3944 a rcd:RubriCriterionLevel ;
+    rcd:description "Major portions of data are missing or of low quality"@en-US ;
+    rcd:score "2"^^xsd:decimal ;
+    rcd:position "3"^^xsd:integer .
+         
+ex:f6e6c40c-c36e-4192-88a1-8572c4d591d8 a rcd:RubriCriterionLevel ;
+    rcd:description "The data collection lacks a sufficient number of data points for the investigation@"@en-US ;
+    rcd:score "1"^^xsd:decimal ;
+    rcd:position "4"^^xsd:integer .
