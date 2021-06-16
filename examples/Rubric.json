@@ -1,0 +1,161 @@
+{
+    "@context": {
+        "rcd": "https://opensource.ieee.org/rcd/",
+        "id": "id",
+        "type": "type",
+        "authoritativeSource": {"id": "rcd:authoritativeSource", "type": "id"},
+        "description": {"id":"rcd:description", "@container": "@language"},
+        "competencyDefinition": {"id": "rcd:competencyDefinition", "type": "id"},
+        "competencyStatement": {"id": "rcd:competencyStatement", "@container": "@language"},
+        "hasPart": {"id": "rcd:hasPart", "type": "id"},
+        "name": {"id": "rcd:name", "@container": "@language"},
+        "position": {"id": "rcd:position", "type": "xsd:integer"},
+        "rubricCriterionLevel": {"id": "rcd:rubricCriterionLevel", "type": "id"},
+        "score": {"id": "rcd:score", "type": "xsd:decimal"},
+        "weight": {"id": "rcd:weight", "type": "xsd:decimal"}
+    }, 
+    "@graph":[
+        {
+            "id": "http://example.org/43bb17c7-34db-425c-8699-4f3c4078833f",
+            "type": "rcd:Rubric",
+            "name": {"en-US": "Project Rubric (analytic)"},
+            "description": {"en-US": "This rubric is used to evaluate a learner's performance on the project and the quality of the resulting work."},
+            "rcd:method": {"en-US": "Manual"},
+            "rubricCriterion": 
+                {"@list":[
+                    "http://example.org/905ea965-275d-4dff-8b62-dd0b1cd562c3",
+                    "http://example.org/2988a9d3-2e4e-4294-8281-83f33f4ea12b",
+                    "http://example.org/a941bade-ae8a-484a-9d11-52390383bc09"
+                    ] 
+                }
+        },
+        {
+            "id": "http://example.org/a941bade-ae8a-484a-9d11-52390383bc09",
+            "type": "rcd:RubricCriterion",
+            "name": {"en-US": "Has a plan for investigation"},
+            "description": {"en-US": "The student turns in a written plan for investigation."},
+            "rubricCriterionLevel": 
+                {"@list":[
+                    "http://example.org/cf30a808-691a-449c-aedf-4f7d9275b477",
+                    "http://example.org/4539b00b-9aeb-4b88-97c2-b927c9d22422",
+                    "http://example.org/e4894f82-018a-4a92-abbe-9ad0ce450e90",
+                    "http://example.org/049f2927-392c-4f76-ae52-814222ffdeaa"
+                    ]
+                },
+            "position": "1",
+            "weight": "1"
+        },
+        {
+            "id": "http://example.org/cf30a808-691a-449c-aedf-4f7d9275b477",
+            "type": "rcd:RubriCriterionLevel",
+            "rcd:description": {"en-US": "The plan is thorough"},
+            "position": "1",
+            "score": "4"
+        },        
+        {
+            "id": "http://example.org/4539b00b-9aeb-4b88-97c2-b927c9d22422",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "The plan is missing a few details"},
+            "position": "2",
+            "score": "3"
+        },
+        {
+            "id": "http://example.org/e4894f82-018a-4a92-abbe-9ad0ce450e90",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "The plan is missing significant details"},
+            "position": "3",
+            "score": "2"
+        },
+        {
+            "id": "http://example.org/049f2927-392c-4f76-ae52-814222ffdeaa",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "The plan is limited"},
+            "position": "4",
+            "score": "1"
+        },        
+        {
+            "id": "http://example.org/2988a9d3-2e4e-4294-8281-83f33f4ea12b",
+            "type": "rcd:RubricCriterion",
+            "name": {"en-US": "Use of materials"},
+            "description": {"en-US": "The student manages materials responsibly."},
+            "rubricCriterionLevel": 
+                {"@list": ["http://example.org/3173d050-e7bd-45d5-8dcd-8ed1cc6d76e9",
+                    "http://example.org/1f35a8aa-64d0-4808-a30f-fb136ac98eed",
+                    "http://example.org/e4fe9d2f-577c-4be1-ac75-ae5d766d307d",
+                    "http://example.org/1f8b3a36-0e5d-47d5-81b3-e4cf3aedc44f"]
+                },
+            "position": "2",
+            "weight": ".5"
+        },
+        {
+            "id": "http://example.org/3173d050-e7bd-45d5-8dcd-8ed1cc6d76e9",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Manages all materials responsibly"},
+            "position": "1",
+            "score": "4"
+        },
+        {
+            "id": "http://example.org/1f35a8aa-64d0-4808-a30f-fb136ac98eed",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Uses the materials responsibly most of the time"},
+            "position": "2",
+            "score": "3"
+        },        
+        {
+            "id": "http://example.org/e4fe9d2f-577c-4be1-ac75-ae5d766d307d",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Mishandles some of the materials"},
+            "position": "3",
+            "score":  "2"
+        },
+        {
+            "id": "http://example.org/1f8b3a36-0e5d-47d5-81b3-e4cf3aedc44f",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Does not use materials properly"},
+            "position": "4",
+            "score": "1"
+        },        
+        {
+            "id": "http://example.org/905ea965-275d-4dff-8b62-dd0b1cd562c3",
+            "type": "rcd:RubricCriterion",
+            "name": {"en-US": "Collects the data"},
+            "description": {"en-US": "The student collects and accurately records a sufficient number of data points."},
+            "rubricCriterionLevel": 
+                {"@list": ["http://example.org/0daea46c-7184-4ae3-8993-395fa15335d1",
+                    "http://example.org/4ade2411-d4af-4d40-8aae-10f7ea97d599",
+                    "http://example.org/bfff24a2-2e26-42d2-bc64-2ed233ee3944",
+                    "http://example.org/f6e6c40c-c36e-4192-88a1-8572c4d591d8"]
+                },
+            "position": "3",
+            "weight": "1.5" 
+        },
+        {
+            "id": "http://example.org/0daea46c-7184-4ae3-8993-395fa15335d1",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Data quality and collection methods exceeds the requirements for the investigation"},
+            "position": "1",
+            "score": "4"
+        },    
+        {
+            "id": "http://example.org/4ade2411-d4af-4d40-8aae-10f7ea97d599",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Data quality and collection methods are sufficient for the investigation "},
+            "position": "2",
+            "score": "3"
+        },
+        {
+            "id": "http://example.org/bfff24a2-2e26-42d2-bc64-2ed233ee3944",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "Major portions of data are missing or of low quality"},
+            "position": "3",
+            "score": "2"
+        },        
+        {
+            "id": "http://example.org/f6e6c40c-c36e-4192-88a1-8572c4d591d8",
+            "type": "rcd:RubriCriterionLevel",
+            "description": {"en-US": "The data collection lacks a sufficient number of data points for the investigation"},
+            "position": "4",
+            "score": "1"
+        }
+    ]
+}
