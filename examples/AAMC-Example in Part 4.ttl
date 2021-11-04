@@ -1,0 +1,281 @@
+@prefix ex: <http://example.org/> .
+@prefix scd: <https://ieee.org/1484.20.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:f8441e1e-6998-416d-a10b-68eb11864373 a scd:CompetencyDefinition ;
+    scd:competencyAssociation ex:0e6e9067-1cd0-4288-9fd7-080d5a33a440,
+        ex:221c34f6-5672-4736-8378-7e91a868aa38,
+        ex:373c5984-284a-465a-b628-25a74989e3d4,
+        ex:86f7b1b7-8acc-40f3-a5bc-bf9eae8653b0,
+        ex:87371bd8-2e44-4470-83b0-a0080e29ce83,
+        ex:a63804dd-c963-4c4f-b682-8bb75ca43755,
+        ex:d23cc630-9c44-4448-a4c8-d7919aab4054,
+        ex:f033a239-16f5-4db2-9bc5-1862ea69fe1e ;
+    scd:competencyStatement "Complete tasks while coordinating and collaborating with others."@en-US ;
+    scd:description "Day 1 residents should be able to perform an accurate complete or focused history and physical exam in a prioritized, organized manner without supervision and with respectfor the patient. The history and physical examination should be tailored to the clinical situation and specific patient encounter. This data gathering and patient interaction activity serves as the basis for clinical work and as the building block for patient evaluation and management. Learners need to integrate the scientific foundations of medicine with clinical reasoning skills to guide their information gathering."@en-US ;
+    scd:name "EPA 1: Gather a History and Perform a Physical Examination"@en-US ;
+    scd:requires ex:43cf8f4d-eebe-4d8b-bdbe-f8c73d16324b,
+        ex:679e4770-89e4-40e9-861b-77a1ab6ddc56,
+        ex:74fd8f48-53bc-4c1a-95ee-26bf73b5b568,
+        ex:7936a6c1-c221-4c90-b647-cc9bfb82e33f,
+        ex:8d0389e2-51d2-437c-9130-230deda55bb3,
+        ex:a9789740-2ad4-453e-9b48-8db5759b4b08,
+        ex:ad35494b-d051-4c51-9d50-4601816dd31d,
+        ex:bdc291d5-fa02-4d40-b52f-411d99a5a633,
+        ex:d4962b2c-8afc-4d1d-9b64-68448d08bd72,
+        ex:d746248a-2d59-4bd0-83af-2c7fe8a04666,
+        ex:fabe70c6-06ad-4da2-88dc-fece62937a25 ;
+    scd:typeLabel "Entrusted Professional Activity"@en-US .
+
+ex:45983208-c56b-41a4-bc30-7121ed140e64 a scd:CompetencyFramework ;
+    scd:name "Core Entrustable Professional Activities for Entering Residency"@en-US .
+    
+ex:0d48d267-17fa-4615-81c9-c4e1715a2933 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identifies pertinent history elements in common presenting situations, symptoms, complaints, disease states (acute and chronic)."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:132cb1b0-2e49-41bd-ae9e-e5fae69bcff5 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Lack of experience results in limited ability to develop clinical mental models, which limits ability to gather relevant information and/or perform appropriate maneuvers."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:17a04ce3-282a-47ab-9841-f49f9bd3a773 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrates patient-centered examination techniques that reflect respect for patient privacy, comfort, and safety (that is, explaining physical exam maneuvers, telling the patient what the physician is doing at each step, keeping patients covered during the examination)."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:218e3988-8829-4b20-a38d-fc57ed96ae41 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Uses medical jargon or other examples of ineffective communication techniques."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:2ed37704-7f5f-40ff-9fbf-e720518db7b5 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Performs a complete and accurate physical exam in logical and fluid sequence."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:34cecdbc-7156-4bdb-8ecb-4d5b8a78c2cb a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Performs a clinically relevant, focused physical exam pertinent to the setting and focus of the patient visit."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Patient-centered skills"@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:40cfc35a-28a3-4613-b537-4f916b372df2 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Links current findings to those from previous patients."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:4d14c586-a122-4171-8e8c-01fb6abd364d a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Does not seek or is overly reliant on secondary data."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:4fc570c3-2350-438f-84b0-2fb088391839 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Uses analytic reasoning and activation of prior knowledge to guide process."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:57915651-5d50-49fe-9f40-0de7fb8b3a02 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identifies and uses alternate sources of information to obtain history when needed, including from family members, primary care physicians, living facilities, and pharmacies."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:6219433b-af01-45aa-9609-522805a7d840 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrates patient-centered interview skills (attentive to patient verbal and nonverbal cues, patient/family culture, social determinants of health, need for interpretive or adaptive services; demonstrates active listening skills)."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:666da0ad-bae2-4f40-8d23-aad59db37aa7 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Either gathers too little information or exhaustively gathers information following a template, regardless of the patient’s chief complaint, with each piece of information gathered seeming as important as the next. Recalls clinical information in the order elicited. Limited ability to gather, filter, prioritize, and connect pieces of information. Uses analytic reasoning from basic pathophysiology knowledge without ability to link findings to prior clinical encounters. Incorrectly performs and elicits most physical examination maneuvers. May miss key physical exam findings. Does not alter the head-to-toe approach to the physical examination to meet the developmental level or behavioral needs of the patient. Does not seek or is overly reliant on secondary data. (PEDS, IM, PSYCH)"@en-US ;
+    scd:typeLabel "Pre-extrustable Behaviors"@en-US .
+
+ex:6687030f-8c42-43cd-a391-d0f550f3bc96 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "May jump to conclusions without probing first (that is, shortcut the scientific method)."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:6ed9047d-c50a-4f09-b93a-38d1d7819ffc a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrates low activation of prior knowledge, either because they lack it or because they do not use it to their advantage in problem solving."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:7c8e2199-a51f-4d6e-9b8b-0c1ec7be3b92 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Incorrectly performs physical exam maneuvers."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:85d4bd0d-2275-4c3c-9eaf-fb82043c6b12 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Information gathering and physical exam maneuvers"@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:8859b661-4765-4c71-9848-9ef30a250b10 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Misses key physical exam findings."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:8bcddb28-ed5a-4d84-ae68-d35989fb1712 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "May be less observant of important information or trends; focused on individual patients, potentially without attention to that patient’s community or background."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:8d3c9ef2-e2c0-412e-b7ea-605856e0caaf a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Clinical experience allows linkage of signs and symptoms of a current patient to those encountered in previous patients. Still relies primarily on analytic reasoning of basic pathophysiology to gather information, but the ability to link current findings to prior clinical encounters allows information to be filtered, prioritized, and synthesized into pertinent positives and negatives as well as broad diagnostic categories. Performs basic physical examination maneuvers correctly and recognizes and correctly interprets abnormal findings. Consistently and successfully uses a developmentally appropriate approach to the physical examination. Seeks and obtains data from secondary sources when needed. (PEDS, IM, PSYCH)"@en-US ;
+    scd:typeLabel "Extrustable Behaviors"@en-US .
+
+ex:9745de82-9725-4fa3-9bcc-9f4ecc222ea4 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Limited ability to filter, prioritize, and connect pieces of information to each other or to previous clinical encounters."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:98694856-124a-41fd-abee-c13f3f1f2d2f a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identifies, describes, and documents abnormal physical exam findings."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:9ad7d0ad-2ef0-4329-83f5-9f71ae122f64 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "May demonstrate disrespectful interactions with patients, because of stress, fatigue, or unawareness (e.g., forgetting to keep patient draped)."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:b7cc5cf3-e4b7-4d37-99b5-6351eaeb932c a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Gathers either insufficient or overly exhaustive information."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:ccf1c3d5-328d-4db6-a0c1-09bf2708b389 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrates clinical reasoning in gathering focused information relevant to a patient’s care."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:cd7e4cbd-a7ac-4551-8a1a-4fc5575c9463 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Obtains focused, pertinent histories in urgent, emergent, and consultation settings."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:d553e4f9-2cf4-408f-8f2c-0a6616c8f458 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Scientific foundation and/or reasoning skills"@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:d5b33489-bf8b-4a59-bb45-7348a7e4f838 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Obtains a complete and accurate history in an organized fashion."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:fa0d0acf-9506-44b4-b987-077e888720b4 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "May generalize based on patient’s age, gender, culture, race, religion, disabilities, and/or sexual orientation."@en-US ;
+    scd:typeLabel "Expected Behavior"@en-US .
+
+ex:06aab508-9405-4404-8d52-bec6f800abb6 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrate patient-centered interview skills (attentive to patient verbal and nonverbal cues, patient/family culture, social determinants of health, need for interpretive or adaptive services; seeks conceptual context of illness; approaches the patient holistically and demonstrates active listening skills)."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:0e6e9067-1cd0-4288-9fd7-080d5a33a440 a scd:Association ;
+    scd:associationType scd:requires ;
+    scd:destination ex:06aab508-9405-4404-8d52-bec6f800abb6 ;
+    scd:source ex:288b06db-d02a-4278-8092-e6db14d27ff3 .
+
+ex:221c34f6-5672-4736-8378-7e91a868aa38 a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:c9bc07c6-8a97-4aaf-aada-6f26ec020ace ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:288b06db-d02a-4278-8092-e6db14d27ff3 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Obtain a complete and accurate history in an organized fashion."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:373c5984-284a-465a-b628-25a74989e3d4 a <file:///base/data/home/apps/s%7Erdf-translator/3.430490253886569585/Association> ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:a6db595c-bf8c-47e8-b661-2a76b27f275f ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:43cf8f4d-eebe-4d8b-bdbe-f8c73d16324b a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identify, describe, and document abnormal physical exam findings."@en-US ;
+    scd:typeLabel "Function: Physical Exam Activity"@en-US .
+
+ex:679e4770-89e4-40e9-861b-77a1ab6ddc56 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Gather essential and accurate information about patients and their conditions through history-taking, physical examination, and the use of laboratory data, imaging, and other tests"@en-US ;
+    scd:typeLabel "Critical Competency"@en-US .
+
+ex:74fd8f48-53bc-4c1a-95ee-26bf73b5b568 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrate patient-centered examination techniques that reflect respect for patient privacy, comfort, and safety (e.g., explaining physical exam maneuvers, telling the patient what one is doing at each step, keeping patients covered during the examination)."@en-US ;
+    scd:typeLabel "Function: Physical Exam Activity"@en-US .
+
+ex:7936a6c1-c221-4c90-b647-cc9bfb82e33f a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identify and use alternate sources of information to obtain history when needed, including but not limited to family members, primary care physicians, living facility, and pharmacy staff"@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:86f7b1b7-8acc-40f3-a5bc-bf9eae8653b0 a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:ffe01e40-d884-4964-87fa-6bf4689f567a ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:87371bd8-2e44-4470-83b0-a0080e29ce83 a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:db553dc7-19b1-4ab6-b6a2-023769c267d4 ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:8d0389e2-51d2-437c-9130-230deda55bb3 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrate cultural awareness and humility (for example, by recognizing that one’s own cultural models may be different from others) and awareness of potential for bias (conscious and unconscious) in interactions with patients."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:a63804dd-c963-4c4f-b682-8bb75ca43755 a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:299f93d9-45fc-44ad-a3c6-428203fce6b3 ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:a9789740-2ad4-453e-9b48-8db5759b4b08 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Perform a clinically relevant, focused physical exam pertinent to the setting and purpose of the patient visit."@en-US ;
+    scd:typeLabel "Function: Physical Exam Activity"@en-US .
+
+ex:ad35494b-d051-4c51-9d50-4601816dd31d a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Demonstrate clinical reasoning in gathering focused information relevant to a patient’s care."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:bdc291d5-fa02-4d40-b52f-411d99a5a633 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Consider cultural and other factors that may influence the patient’s description of symptoms."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:d23cc630-9c44-4448-a4c8-d7919aab4054 a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:b923f742-411f-4779-b803-8241c2af5907 ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:d4962b2c-8afc-4d1d-9b64-68448d08bd72 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Identify pertinent history elements in common presenting situations, symptoms, complaints, and disease states (acute and chronic)."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .
+
+ex:d746248a-2d59-4bd0-83af-2c7fe8a04666 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Perform a complete and accurate physical exam in logical and fluid sequence."@en-US ;
+    scd:typeLabel "Function: Physical Exam Activity"@en-US .
+
+ex:f033a239-16f5-4db2-9bc5-1862ea69fe1e a scd:CompetencyAssociation ;
+    scd:associationType skos:narrowerMatch ;
+    scd:destination ex:15b93de3-2663-4700-9082-906e40e7bd27 ;
+    scd:source ex:f8441e1e-6998-416d-a10b-68eb11864373 .
+
+ex:fabe70c6-06ad-4da2-88dc-fece62937a25 a scd:CompetencyDefinition ;
+    scd:competencyFramework ex:45983208-c56b-41a4-bc30-7121ed140e64 ;
+    scd:competencyStatement "Obtain focused, pertinent histories in urgent, emergent, and consultative settings."@en-US ;
+    scd:typeLabel "Function: History Activity"@en-US .

@@ -1,0 +1,414 @@
+{
+  "@context": "https://opensource.ieee.org/scd/v2021.json#",
+  "@graph": [
+        {
+            "@id": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64",
+            "@type": "scd:CompetencyFramework" ,
+            "name": {"en-US": "Core Entrustable Professional Activities for Entering Residency"} ,
+            "publisherName": {"en-US": "Association of American Medical Colleges"} , 
+            "authoritativeSource": "https://store.aamc.org/downloadable/download/sample/sample_id/63/" ,
+            "hasPart": "http://example.org/f8441e1e-6998-416d-a10b-68eb11864373"
+        },
+        {
+            "@id": "http://example.org/f8441e1e-6998-416d-a10b-68eb11864373",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Entrusted Professional Activity"} ,
+            "name": {"en-US": "EPA 1: Gather a History and Perform a Physical Examination"} ,
+            "competencyStatement": {"en-US": "Complete tasks while coordinating and collaborating with others."} ,
+            "description": {"en-US": "Day 1 residents should be able to perform an accurate complete or focused history and physical exam in a prioritized, organized manner without supervision and with respectfor the patient. The history and physical examination should be tailored to the clinical situation and specific patient encounter. This data gathering and patient interaction activity serves as the basis for clinical work and as the building block for patient evaluation and management. Learners need to integrate the scientific foundations of medicine with clinical reasoning skills to guide their information gathering."} ,
+            "requires": [
+                "http://example.org/679e4770-89e4-40e9-861b-77a1ab6ddc56" ,
+                "http://example.org/bdc291d5-fa02-4d40-b52f-411d99a5a633" ,
+                "http://example.org/74fd8f48-53bc-4c1a-95ee-26bf73b5b568" ,
+                "http://example.org/43cf8f4d-eebe-4d8b-bdbe-f8c73d16324b" ,
+                "http://example.org/fabe70c6-06ad-4da2-88dc-fece62937a25" ,
+                "http://example.org/7936a6c1-c221-4c90-b647-cc9bfb82e33f" ,
+                "http://example.org/d746248a-2d59-4bd0-83af-2c7fe8a04666" ,
+                "http://example.org/d4962b2c-8afc-4d1d-9b64-68448d08bd72" ,
+                "http://example.org/ad35494b-d051-4c51-9d50-4601816dd31d" ,
+                "http://example.org/8d0389e2-51d2-437c-9130-230deda55bb3" ,
+                "http://example.org/a9789740-2ad4-453e-9b48-8db5759b4b08"
+            ],
+            "isPartOf": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/679e4770-89e4-40e9-861b-77a1ab6ddc56",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Critical Competency"} ,
+            "referenceCode": "PC 2" ,
+            "competencyStatement": {"en-US": "Gather essential and accurate information about patients and their conditions through history-taking, physical examination, and the use of laboratory data, imaging, and other tests"} ,
+            "hasPart": [
+                "http://example.org/666da0ad-bae2-4f40-8d23-aad59db37aa7" ,
+                "http://example.org/8d3c9ef2-e2c0-412e-b7ea-605856e0caaf"
+            ] ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/666da0ad-bae2-4f40-8d23-aad59db37aa7",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Pre-extrustable Behaviors"} ,
+            "competencyStatement": {"en-US": "Either gathers too little information or exhaustively gathers information following a template, regardless of the patient’s chief complaint, with each piece of information gathered seeming as important as the next. Recalls clinical information in the order elicited. Limited ability to gather, filter, prioritize, and connect pieces of information. Uses analytic reasoning from basic pathophysiology knowledge without ability to link findings to prior clinical encounters. Incorrectly performs and elicits most physical examination maneuvers. May miss key physical exam findings. Does not alter the head-to-toe approach to the physical examination to meet the developmental level or behavioral needs of the patient. Does not seek or is overly reliant on secondary data. (PEDS, IM, PSYCH)"} ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "hasPart": [
+                "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+                "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+                "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" 
+            ],
+            "isPartOf": "http://example.org/679e4770-89e4-40e9-861b-77a1ab6ddc56"   
+        },
+        {
+            "@id": "http://example.org/8d3c9ef2-e2c0-412e-b7ea-605856e0caaf",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Extrustable Behaviors"} ,
+            "competencyStatement": {"en-US": "Clinical experience allows linkage of signs and symptoms of a current patient to those encountered in previous patients. Still relies primarily on analytic reasoning of basic pathophysiology to gather information, but the ability to link current findings to prior clinical encounters allows information to be filtered, prioritized, and synthesized into pertinent positives and negatives as well as broad diagnostic categories. Performs basic physical examination maneuvers correctly and recognizes and correctly interprets abnormal findings. Consistently and successfully uses a developmentally appropriate approach to the physical examination. Seeks and obtains data from secondary sources when needed. (PEDS, IM, PSYCH)"} ,
+            "hasPart": [
+                "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" ,
+                "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+                "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" 
+            ],
+            "isPartOf": "http://example.org/679e4770-89e4-40e9-861b-77a1ab6ddc56" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64"  
+        },            
+        {
+            "@id": "http://example.org/bdc291d5-fa02-4d40-b52f-411d99a5a633",
+            "@type": "CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Consider cultural and other factors that may influence the patient’s description of symptoms."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/74fd8f48-53bc-4c1a-95ee-26bf73b5b568",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Demonstrate patient-centered examination techniques that reflect respect for patient privacy, comfort, and safety (e.g., explaining physical exam maneuvers, telling the patient what one is doing at each step, keeping patients covered during the examination)."} ,
+            "typeLabel": {"en-US": "Function: Physical Exam Activity"}
+        },
+        {
+            "@id": "http://example.org/43cf8f4d-eebe-4d8b-bdbe-f8c73d16324b",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Identify, describe, and document abnormal physical exam findings."} ,
+            "typeLabel": {"en-US":  "Function: Physical Exam Activity"}
+        },
+        {
+            "@id": "http://example.org/fabe70c6-06ad-4da2-88dc-fece62937a25",
+            "@type": "scd:CompetencyDefinition",
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Obtain focused, pertinent histories in urgent, emergent, and consultative settings."} ,
+            "typeLabel": {"en-US": "Function: History Activity"} 
+        },
+        {
+            "@id": "http://example.org/7936a6c1-c221-4c90-b647-cc9bfb82e33f",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Identify and use alternate sources of information to obtain history when needed, including but not limited to family members, primary care physicians, living facility, and pharmacy staff"} ,
+            "typeLabel": {"en-US": "Function: History Activity"} 
+        },
+        {
+            "@id": "http://example.org/d746248a-2d59-4bd0-83af-2c7fe8a04666",
+            "@type": "CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Perform a complete and accurate physical exam in logical and fluid sequence."} ,
+            "typeLabel": {"en-US": "Function: Physical Exam Activity"} 
+        },
+        {
+            "@id": "http://example.org/d4962b2c-8afc-4d1d-9b64-68448d08bd72",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Identify pertinent history elements in common presenting situations, symptoms, complaints, and disease states (acute and chronic)."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/ad35494b-d051-4c51-9d50-4601816dd31d",
+            "@type": "CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Demonstrate clinical reasoning in gathering focused information relevant to a patient’s care."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/8d0389e2-51d2-437c-9130-230deda55bb3",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Demonstrate cultural awareness and humility (for example, by recognizing that one’s own cultural models may be different from others) and awareness of potential for bias (conscious and unconscious) in interactions with patients."} ,
+            "typeLabel": {"en-US": "Function: History Activity"} 
+        },
+        {
+            "@id": "http://example.org/a9789740-2ad4-453e-9b48-8db5759b4b08",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Perform a clinically relevant, focused physical exam pertinent to the setting and purpose of the patient visit."} ,
+            "typeLabel": {"en-US": "Function: Physical Exam Activity"}
+        },
+        {
+            "@id": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior"} ,
+            "competencyStatement": {"en-US": "Information gathering and physical exam maneuvers"} ,
+            "hasPart": [
+                "http://example.org/b7cc5cf3-e4b7-4d37-99b5-6351eaeb932c" ,
+                "http://example.org/7c8e2199-a51f-4d6e-9b8b-0c1ec7be3b92" ,
+                "http://example.org/8859b661-4765-4c71-9848-9ef30a250b10" ,
+                "http://example.org/4d14c586-a122-4171-8e8c-01fb6abd364d" ,
+                "http://example.org/218e3988-8829-4b20-a38d-fc57ed96ae41" ,
+                "http://example.org/d5b33489-bf8b-4a59-bb45-7348a7e4f838" ,
+                "http://example.org/0d48d267-17fa-4615-81c9-c4e1715a2933" ,
+                "http://example.org/cd7e4cbd-a7ac-4551-8a1a-4fc5575c9463" ,
+                "http://example.org/57915651-5d50-49fe-9f40-0de7fb8b3a02" ,
+                "http://example.org/2ed37704-7f5f-40ff-9fbf-e720518db7b5" ,
+                "http://example.org/34cecdbc-7156-4bdb-8ecb-4d5b8a78c2cb" ,
+                "http://example.org/98694856-124a-41fd-abee-c13f3f1f2d2f" 
+            ] ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64"  
+        } ,
+        {
+            "@id": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior"} ,
+            "competencyStatement": {"en-US": "Scientific foundation and/or reasoning skills"} ,
+            "hasPart": [
+                "http://example.org/9745de82-9725-4fa3-9bcc-9f4ecc222ea4" ,
+                "http://example.org/8bcddb28-ed5a-4d84-ae68-d35989fb1712" ,
+                "http://example.org/6687030f-8c42-43cd-a391-d0f550f3bc96" ,
+                "http://example.org/132cb1b0-2e49-41bd-ae9e-e5fae69bcff5" ,
+                "http://example.org/6ed9047d-c50a-4f09-b93a-38d1d7819ffc" ,
+                "http://example.org/ccf1c3d5-328d-4db6-a0c1-09bf2708b389" ,
+                "http://example.org/40cfc35a-28a3-4613-b537-4f916b372df2" ,
+                "http://example.org/4fc570c3-2350-438f-84b0-2fb088391839" 
+            ] ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64"  
+        } ,
+        {
+            "@id": "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9",
+            "@type": "CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior"} ,
+            "competencyStatement": {"en-US": "Patient-centered skills"} ,
+            "hasPart": [
+               "http://example.org/9ad7d0ad-2ef0-4329-83f5-9f71ae122f64" ,
+               "http://example.org/fa0d0acf-9506-44b4-b987-077e888720b4" ,
+               "http://example.org/6219433b-af01-45aa-9609-522805a7d840" ,
+               "http://example.org/17a04ce3-282a-47ab-9841-f49f9bd3a773" 
+            ] ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64"  
+        } ,    
+        {
+            "@id": "http://example.org/b7cc5cf3-e4b7-4d37-99b5-6351eaeb932c",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Gathers either insufficient or overly exhaustive information."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/7c8e2199-a51f-4d6e-9b8b-0c1ec7be3b92",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Incorrectly performs physical exam maneuvers."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/8859b661-4765-4c71-9848-9ef30a250b10",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Misses key physical exam findings."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/4d14c586-a122-4171-8e8c-01fb6abd364d",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Does not seek or is overly reliant on secondary data."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/218e3988-8829-4b20-a38d-fc57ed96ae41",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Uses medical jargon or other examples of ineffective communication techniques."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/9745de82-9725-4fa3-9bcc-9f4ecc222ea4",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Limited ability to filter, prioritize, and connect pieces of information to each other or to previous clinical encounters."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/8bcddb28-ed5a-4d84-ae68-d35989fb1712",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "May be less observant of important information or trends; focused on individual patients, potentially without attention to that patient’s community or background."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/6687030f-8c42-43cd-a391-d0f550f3bc96",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "May jump to conclusions without probing first (that is, shortcut the scientific method)."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/132cb1b0-2e49-41bd-ae9e-e5fae69bcff5",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Lack of experience results in limited ability to develop clinical mental models, which limits ability to gather relevant information and/or perform appropriate maneuvers."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/6ed9047d-c50a-4f09-b93a-38d1d7819ffc",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Demonstrates low activation of prior knowledge, either because they lack it or because they do not use it to their advantage in problem solving."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/9ad7d0ad-2ef0-4329-83f5-9f71ae122f64",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "May demonstrate disrespectful interactions with patients, because of stress, fatigue, or unawareness (e.g., forgetting to keep patient draped)."} ,
+            "isPartOf": "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/fa0d0acf-9506-44b4-b987-077e888720b4",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "May generalize based on patient’s age, gender, culture, race, religion, disabilities, and/or sexual orientation."} ,
+            "isPartOf": "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },     
+        {
+            "@id": "http://example.org/d5b33489-bf8b-4a59-bb45-7348a7e4f838",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Obtains a complete and accurate history in an organized fashion."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/0d48d267-17fa-4615-81c9-c4e1715a2933",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Identifies pertinent history elements in common presenting situations, symptoms, complaints, disease states (acute and chronic)."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/cd7e4cbd-a7ac-4551-8a1a-4fc5575c9463",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Obtains focused, pertinent histories in urgent, emergent, and consultation settings."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/57915651-5d50-49fe-9f40-0de7fb8b3a02",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Identifies and uses alternate sources of information to obtain history when needed, including from family members, primary care physicians, living facilities, and pharmacies."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/2ed37704-7f5f-40ff-9fbf-e720518db7b5",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Performs a complete and accurate physical exam in logical and fluid sequence."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/34cecdbc-7156-4bdb-8ecb-4d5b8a78c2cb",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Performs a clinically relevant, focused physical exam pertinent to the setting and focus of the patient visit."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/98694856-124a-41fd-abee-c13f3f1f2d2f",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Identifies, describes, and documents abnormal physical exam findings."} ,
+            "isPartOf": "http://example.org/85d4bd0d-2275-4c3c-9eaf-fb82043c6b12" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/ccf1c3d5-328d-4db6-a0c1-09bf2708b389",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Demonstrates clinical reasoning in gathering focused information relevant to a patient’s care."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/40cfc35a-28a3-4613-b537-4f916b372df2",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Links current findings to those from previous patients."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/4fc570c3-2350-438f-84b0-2fb088391839",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Uses analytic reasoning and activation of prior knowledge to guide process."} ,
+            "isPartOf": "http://example.org/d553e4f9-2cf4-408f-8f2c-0a6616c8f458" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/6219433b-af01-45aa-9609-522805a7d840",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Demonstrates patient-centered interview skills (attentive to patient verbal and nonverbal cues, patient/family culture, social determinants of health, need for interpretive or adaptive services; demonstrates active listening skills)."} ,
+            "isPartOf": "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },
+        {
+            "@id": "http://example.org/17a04ce3-282a-47ab-9841-f49f9bd3a773",
+            "@type": "scd:CompetencyDefinition" ,
+            "typeLabel": {"en-US": "Expected Behavior" } ,
+            "competencyStatement": {"en-US": "Demonstrates patient-centered examination techniques that reflect respect for patient privacy, comfort, and safety (that is, explaining physical exam maneuvers, telling the patient what the physician is doing at each step, keeping patients covered during the examination)."} ,
+            "isPartOf": "http://example.org/3f72efa5-dbcb-4ee7-887f-3a0dd63f73f9" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" 
+        },   
+        {
+            "@id": "http://example.org/288b06db-d02a-4278-8092-e6db14d27ff3",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Obtain a complete and accurate history in an organized fashion."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/288b06db-d02a-4278-8092-e6db14d27ff3",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Obtain a complete and accurate history in an organized fashion."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/06aab508-9405-4404-8d52-bec6f800abb6",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Demonstrate patient-centered interview skills (attentive to patient verbal and nonverbal cues, patient/family culture, social determinants of health, need for interpretive or adaptive services; seeks conceptual context of illness; approaches the patient holistically and demonstrates active listening skills)."} ,
+            "typeLabel": {"en-US": "Function: History Activity" }
+        },
+        {
+            "@id": "http://example.org/74fd8f48-53bc-4c1a-95ee-26bf73b5b568",
+            "@type": "scd:CompetencyDefinition" ,
+            "competencyFramework": "http://example.org/45983208-c56b-41a4-bc30-7121ed140e64" ,
+            "competencyStatement": {"en-US": "Demonstrate patient-centered examination techniques that reflect respect for patient privacy, comfort, and safety (e.g., explaining physical exam maneuvers, telling the patient what one is doing at each step, keeping patients covered during the examination)."} ,
+            "typeLabel": {"en-US": "Function: Physical Exam Activity"}
+        }  
+    ]
+}
