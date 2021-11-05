@@ -87,7 +87,7 @@ scd:conformsTo a rdf:Property, skos:concept ;
 scd:description a rdf:Property ;
     rdfs:label "Description"@en-US ;
     rdfs:comment "A narrative in plain language that describes and may contextualize the resource."@en-US ;
-    skos:note "The data value may be expressed in multiple languages with no more than one instance per language."@en-US
+    skos:note "The data value may be expressed in multiple languages with no more than one instance per language."@en-US ;
     schema:domainIncludes 
         scd:Rubric,
         scd:RubricCriterion,
@@ -116,7 +116,7 @@ scd:hasMember a rdf:Property, skos:Concept ;
 scd:hasPart a rdf:Property, skos:Concept ;
     rdfs:label "Has Part"@en-US ;
     rdfs:comment "The destination competenceis a part of the competence defined in this source."@en-US ;
-    skos:note """Non-Normative Note: This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ,
+    skos:note """Non-Normative Note: This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ;
     schema:domainIncludes scd:CompetencyDefinition, scd:CompetencyAssociation ;
     schema:rangeIncludes scd:CompetencyDefinition .
     
@@ -218,15 +218,15 @@ scd:source a rdf:Property ;
 
 scd:typeLabel a rdf:Property ;
     rdfs:label "Type Label"@en-US ;
-    rdfs:comment "A human readable label for the type, class, or category of the competency. 
-    sckos:note """The label may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\").\n\nThe data value may be expressed in multiple languages with no more than one instance per language."""@en-US ;
+    rdfs:comment "A human readable label for the type, class, or category of the competency"@en-US ; 
+    skos:note """The label may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\").\n\nThe data value may be expressed in multiple languages with no more than one instance per language."""@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
     schema:rangeIncludes rdf:langString .
        
 scd:typeUrl a rdf:Property ;
     rdfs:label "Type URL"@en-US ;
-    rdfs:comment "URI of the type or category of the competency.
-    skos:note "A globally unique identifier for the type, class, or category of the competency. The referenced resource may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\"). It is a URI that may be a resolvable URL to competency_framework metadata in linked data implementations."@en-US ;
+    rdfs:comment "URI of the type or category of the competency"@en-US ;
+    skos:note "A globally unique identifier for the type, class, or category of the competency. The referenced resource may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\"). It is a URI that may be a resolvable URL to CompetencyFramework metadata in linked data implementations."@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
     schema:rangeIncludes schema:URL .
     
