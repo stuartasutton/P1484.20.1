@@ -57,7 +57,7 @@ scd:competencyAssociation a rdf:Property ;
         scd:CompetencyFramework ;
     schema:rangeIncludes scd:CompetencyAssociation .
 
-scd:competencyDefinbition a rdf:Property ;
+scd:competencyDefinition a rdf:Property ;
     rdfs:label "Competency Definition"@en-US ;
     rdfs:comment "Url of a CompetencyDefinition within this framework."@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
