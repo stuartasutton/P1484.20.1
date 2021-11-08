@@ -52,7 +52,7 @@
     "rubric": {"@id": "scd:rubric", "@type": "@id"} ,
     "rubricCriterion": {"@id": "scd:rubricCriterion", "@type": "@id"} ,
     "rubricCriterionLevel": {"@id": "scd:rubricCriterionLevel", "@type": "@id"} ,
-    "score": {"@id": "rdc:score", "@type": "xsd:float"} ,
+    "score": {"@id": "scd:score", "@type": "xsd:float"} ,
     "source": {"@id": "scd:source", "@type": "@id"} ,    
     "typeUrl": {"@id": "scd:typeUrl", "@type": "@id"} ,
     "typeLabel": {"@id": "scd:label", "@container": "@language"} ,
