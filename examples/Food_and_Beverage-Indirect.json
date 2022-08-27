@@ -1,30 +1,30 @@
 {
     "@context": {
-        "rcd": "https://opensource.ieee.org/rcd/",
+        "scd": "https://opensource.ieee.org/rcd/",
         "ceasn": "https://purl.org/ctdlasn/terms/",
         "id": "@id",
         "type": "@type",
-        "authoritativeSource": {"@id": "rcd:authoritativeSource", "@type": "@id"},
-        "associationType": {"@id": "rcd:associationType", "@type": "@id"},
-        "description": {"@id":"rcd:description", "@container": "@language"},
-        "destination": {"@id": "rcd:destination", "@type": "@id"},
-        "competencyAssociation": {"@id": "rcd:competencyAssociation", "@type": "@id"},
-        "competencyDefinition": {"@id": "rcd:competencyDefinition", "@type": "@id"},
-        "competencyStatement": {"@id": "rcd:competencyStatement", "@container": "@language"},
-        "hasPart": {"@id": "rcd:hasPart", "@type": "@id"},
-        "name": {"@id": "rcd:name", "@container": "@language"},
+        "authoritativeSource": {"@id": "scd:authoritativeSource", "@type": "@id"},
+        "associationType": {"@id": "scd:associationType", "@type": "@id"},
+        "description": {"@id":"scd:description", "@container": "@language"},
+        "destination": {"@id": "scd:destination", "@type": "@id"},
+        "resourceAssociation": {"@id": "scd:resourceAssociation", "@type": "@id"},
+        "competencyDefinition": {"@id": "scd:competencyDefinition", "@type": "@id"},
+        "competencyStatement": {"@id": "scd:competencyStatement", "@container": "@language"},
+        "hasPart": {"@id": "scd:hasPart", "@type": "@id"},
+        "name": {"@id": "scd:name", "@container": "@language"},
         "publisherName": {"@id": "ceasn:publisherName", "@container": "@language"},
-        "source": {"@id": "rcd:source", "@type": "@id"}       
+        "source": {"@id": "scd:source", "@type": "@id"}       
     }, 
     "@graph": [
         {
             "id": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8",
-            "type": "rcd:CompetencyFramework" ,
+            "type": "scd:CompetencyFramework" ,
             "name": { "en-us": "Food and Beverage Service Competency Model"} ,
             "description": { "en-us": "This national competency model for the food and beverage service ..."} ,
             "publisherName": { "en-us": "U.S. Department of Labor"}, 
             "authoritativeSource": "https://www.careeronestop.org/CompetencyModel/Competency-Models/food-service.aspx" ,
-            "competencyAssociation": [
+            "resourceAssociation": [
                 "https://example.org/resources/83fc02b0-1ed3-4536-999e-b81245e04f09",
                 "https://example.org/resources/6acbde00-b776-4a47-84b5-3bcb695ec72d",
                 "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759" 
@@ -37,45 +37,45 @@
         },
         {
             "id": "https://example.org/resources/2bd43263-5dfb-40c6-8cfb-661edda8f7a6",
-            "type": "rcd:CompetencyDefinition" ,
+            "type": "scd:CompetencyDefinition" ,
             "competencyStatement": { "en-us": "Personal Effectiveness Competencies"},
-            "competencyAssociation": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
+            "resourceAssociation": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
             "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8" 
         },
         {
             "id": "https://example.org/resources/4af757ed-1b66-4627-ac37-62b7e4e5f383",
-            "type": "rcd:CompetencyDefinition" ,
+            "type": "scd:CompetencyDefinition" ,
             "competencyStatement": { "en-us": "Interpersonal Skills"} ,
             "description": { "en-us": "Displaying the skills to work effectively with others from diverse backgrounds."},
-            "competencyAssociation": "https://example.org/resources/6acbde00-b776-4a47-84b5-3bcb695ec72d",
+            "resourceAssociation": "https://example.org/resources/6acbde00-b776-4a47-84b5-3bcb695ec72d",
             "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"    
         },
         {
             "id": "https://example.org/resources/c42c4c38-c995-43f8-94b2-a4d6b60121ec",
-            "type": "rcd:CompetencyDefinition" ,
+            "type": "scd:CompetencyDefinition" ,
             "competencyStatement": { "en-us": "Integrity"} ,
             "description": { "en-us": "Displaying strong business and work ethics."},
-            "competencyAssociation": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
+            "resourceAssociation": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
             "competencyFramework": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8"   
         },
         {
             "id": "https://example.org/resources/83fc02b0-1ed3-4536-999e-b81245e04f09",
-            "type": "rcd:CompetencyAssociation",
-            "associationType": "rcd:competencyDefinition",
+            "type": "scd:CompetencyAssociation",
+            "associationType": "scd:competencyDefinition",
             "source": "https://example.org/resources/da3fd37b-b835-4989-8f1c-c0880c192fc8",
             "destination": "https://example.org/resources/2bd43263-5dfb-40c6-8cfb-661edda8f7a6" 
         },
         {
             "id": "https://example.org/resources/6acbde00-b776-4a47-84b5-3bcb695ec72d",
-            "type": "rcd:CompetencyAssociation",
-            "associationType": "rcd:hasPart",
+            "type": "scd:CompetencyAssociation",
+            "associationType": "scd:hasPart",
             "source": "https://example.org/resources/2bd43263-5dfb-40c6-8cfb-661edda8f7a6",
             "destination": "https://example.org/resources/4af757ed-1b66-4627-ac37-62b7e4e5f383" 
         },
         {
             "id": "https://example.org/resources/52ecddce-5c1a-42cb-89f4-4b598bc81759",
-            "type": "rcd:CompetencyAssociation",
-            "associationType": "rcd:hasPart",
+            "type": "scd:CompetencyAssociation",
+            "associationType": "scd:hasPart",
             "source": "https://example.org/resources/2bd43263-5dfb-40c6-8cfb-661edda8f7a6",
             "destination": "https://example.org/resources/c42c4c38-c995-43f8-94b2-a4d6b60121ec" 
         }
