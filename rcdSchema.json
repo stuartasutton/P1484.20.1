@@ -2,47 +2,50 @@
 	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/rcdContext.json",
 	"@graph": [
         {
-            "id": "CompetencyAssociation",
-            "type": "Class",
-            "label": {"en-US": "CompetencyAssociation"},
-            "comment": {"en-US": "The relation of competency definitions to other competency definitions and\\/or competency frameworks to competency frameworks to support competency maps or competency sub frameworks or linked controlled vocabulary terms as metadata to further define a competency definition."}
-        },
-        {
             "id:": "CompetencyDefinition",
             "type": "Class",
             "label": { "en-US": "Competency Definition"},
-            "comment": {"en-US": "A resource that includes text that describes a capability or behavior that an actor (person, team, organization) may learn or be able to do within a given situation and environment along with definitions of the potential levels of competence, the mastery threshold, and metadata related to that statement."}
+            "comment": {"en-US": "A resource that states a capability or behavior that an actor may learn or be able to do within a given context with references to potential levels of competence, a mastery threshold, and other contextualizing metadata."},
+            "note": {"en-US": "Comment: Actors may include persons, teams and organizations."}
         },
         {
             "id:": "CompetencyFramework",
             "type": "Class",
             "label": {"en-US" :"Competency Framework"},
-            "comment": {"en-US" :"A collection of Competency Definition items and/or Competency Associations, and/or metadata."}
+            "comment": {"en-US" :"A resource that identifies a collection of logically related Competency Definitions, Competency Associations, and contextualizing metadata."}
+        },
+        {
+            "id": "ResourceAssociation",
+            "type": "Class",
+            "label": {"en-US": "ResourceAssociation"},
+            "comment": {"en-US": "A resource that defines a relationship between two resources."},
+            "note": {"@en-US": "Comment: The ResourceAssociation is used to relate one CompetencyDefinition to another CompetencyDefinition or to any other resource within or without a CompetencyFramework including resources such as controlled vocabulary terms (concepts), jobs, and assessment instruments"}
         },
         {
             "id:": "Rubric",
             "type": "Class",
             "label": {"en-US": "Rubric"},
-            "comment": {"en-US": "A rubric is a set of criteria or indicators that assist in determining whether an entity possesses a given competence or a level of competence in a task or work product. A rubric may have one or more RubricCriterion."},
-            "note": {"en-US": "The optional property schema.org/additionalType may be used to specify a type of rubric, e.g. \"analytic\", \"developmental\", \"checklist\", \"holistic\". A typical holistic rubric would require one rubricCriterion with more than one rubricCriterionLevel. A typical analytic rubric would require more than one rubricCriterion with each having more than one rubricCriterionLevel.\n\nTo support cataloging or search for rubrics when there are more than one version use startDate, endDate, version, replaces, isReplacedBy optional properties. (See 5.7.)"}
+            "comment": {"en-US": "A set of criteria or indicators that assist in determining whether an entity possesses a given competence or level of proficiency in a task or work product."},
+            "note": {"en-US": "Comment: A Rubric may have one or more instances of RubricCriterion."}
         },
         {
             "id:": "RubricCriterion",
             "type": "Class",
             "label": {"en-US": "Rubric Criterion"},
-            "comment": {"en-US": "A single criterion by which one aspect of an entity’s competence may be evaluated. Points to any number of RubricCriterionLevels."}
+            "comment": {"en-US": "A single criterion by which one aspect of an entity’s competence may be evaluated."},
+            "note": {"en-US": "Comment: Points to any number of instances of RubricCriterionLevel."}
         },
         {
             "id:": "RubricCriterionLevel",
             "type": "Class",
             "label": {"en-US": "CriterionLevel"},
-            "comment": {"en-US": "A level of competence."}
+            "comment": {"en-US": "A degree or level of competence."}
         },
         {
             "id:": "associationType",
             "type": "rdf:Property",
             "label": {"en-US": "Association Type"},    
-            "comment": {"en-US": "Defines the type of the association between two resources."},
+            "comment": {"en-US": "Type of the association between two resources."},
             "domainIncludes": "CompetencyAssociation",
             "rangeIncludes": "Concept"
         },
@@ -50,40 +53,41 @@
             "id:": "authoritativeSource",
             "type": "rdf:Property",
             "label": {"en-US": "Authoritative Source"},
-            "comment": {"en-US": "The original competency framework which this resource is based on or derived from."},
+            "comment": {"en-US": "Original competency framework which this resource is based on or derived from."},
             "domainIncludes": "CompetencyFramework",
-            "rangeIncludes": "URL"
+            "rangeIncludes": "CompetencyFramework" 
         },
         {
             "id:": "category",
             "type": "rdf:Property",
             "label": {"en-US": "Category"},
-            "comment": {"en-US": "A textual label for the category by which rubricCriterion may be grouped."},
+            "comment": {"en-US": "Textual label for the category by which rubricCriterion may be grouped."},
+            "note": {"@en-US": "Comment: The data value may be expressed in multiple languages with no more than one instance per language."},
             "domainIncludes": "RubricCriterion",
             "rangeIncludes": "langString"
         },
         {
-            "id:": "competencyAssociation",
+            "id:": "resourceAssociation",
             "type": "Property",
-            "label": {"en-US": "Competency Association"},
+            "label": {"en-US": "Resource Association"},
             "comment": {"en-US": "Url of a CompetencyAssociation used within this resource."}, 
             "domainIncludes": ["CompetencyDefinition",
                 "CompetencyFramework"],
-            "rangeIncludes": "CompetencyAssociation"
+            "rangeIncludes": "ResourceAssociation"
         },
         {
             "id:": "competencyDefinition",
             "type": "Property",
             "label": {"en-US": "Competency Definition"},
-            "comment": {"en-US": "Url of a CompetencyDefinition within this framework."},
-            "domainIncludes": "CompetencyDefinition",
-            "rangeIncludes": "CompetencyFramework"
+            "comment": {"en-US": "CompetencyDefinition within this framework."},
+            "domainIncludes": "CompetencyFramework",
+            "rangeIncludes": "CompetencyDefinition"
         },
         {
             "id:": "competencyFramework",
             "type": "Property",
             "label": {"en-US": "Competency Framework"},
-            "comment": {"en-US": "URI of a competency framework to which this item belongs."},
+            "comment": {"en-US": "CompetencyFramework to which this item belongs."},
             "domainIncludes": "CompetencyDefinition",
             "rangeIncludes": "CompetencyFramework"
         },
