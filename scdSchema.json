@@ -1,0 +1,323 @@
+{
+	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/rcdContext.json",
+	"@graph": [
+        {
+            "id:": "CompetencyDefinition",
+            "type": "Class",
+            "label": { "en-US": "Competency Definition"},
+            "comment": {"en-US": "A resource that states a capability or behavior that an actor may learn or be able to do within a given context with references to potential levels of competence, a mastery threshold, and other contextualizing metadata."},
+            "note": {"en-US": "Comment: Actors may include persons, teams and organizations."}
+        },
+        {
+            "id:": "CompetencyFramework",
+            "type": "Class",
+            "label": {"en-US" :"Competency Framework"},
+            "comment": {"en-US" :"A resource that identifies a collection of logically related Competency Definitions, Competency Associations, and contextualizing metadata."}
+        },
+        {
+            "id": "ResourceAssociation",
+            "type": "Class",
+            "label": {"en-US": "ResourceAssociation"},
+            "comment": {"en-US": "A resource that defines a relationship between two resources."},
+            "note": {"@en-US": "Comment: The ResourceAssociation is used to relate one CompetencyDefinition to another CompetencyDefinition or to any other resource within or without a CompetencyFramework including resources such as controlled vocabulary terms (concepts), jobs, and assessment instruments"}
+        },
+        {
+            "id:": "Rubric",
+            "type": "Class",
+            "label": {"en-US": "Rubric"},
+            "comment": {"en-US": "A resource that defined a set of criteria or indicators that assist in determining whether an entity possesses a given competence or level of proficiency in a task or work product."},
+            "note": {"en-US": "Comment: A Rubric may have one or more instances of RubricCriterion."}
+        },
+        {
+            "id:": "RubricCriterion",
+            "type": "Class",
+            "label": {"en-US": "Rubric Criterion"},
+            "comment": {"en-US": "A resource that defines a single criterion by which one aspect of an entity’s competence may be evaluated."},
+            "note": {"en-US": "Comment: Points to any number of instances of RubricCriterionLevel."}
+        },
+        {
+            "id:": "RubricCriterionLevel",
+            "type": "Class",
+            "label": {"en-US": "CriterionLevel"},
+            "comment": {"en-US": "A resource that defines a degree or level of competence."}
+        },
+        {
+            "id:": "associationType",
+            "type": "rdf:Property",
+            "label": {"en-US": "Association Type"},    
+            "comment": {"en-US": "Type of the association between two resources."},
+            "domainIncludes": "CompetencyAssociation",
+            "rangeIncludes": ["Concept", "Property"]
+        },
+        {
+            "id:": "category",
+            "type": "rdf:Property",
+            "label": {"en-US": "Category"},
+            "comment": {"en-US": "Textual label for the category by which rubricCriterion may be grouped."},
+            "note": {"@en-US": "Comment: The data value may be expressed in multiple languages with no more than one instance per language."},
+            "domainIncludes": "RubricCriterion",
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "competencyFramework",
+            "type": "Property",
+            "label": {"en-US": "Competency Framework"},
+            "comment": {"en-US": "CompetencyFramework to which this item belongs."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "CompetencyFramework"
+        },
+        {
+            "id:": "competencyLevel",
+            "type": "Property",
+            "label": {"en-US": "Competency Level"},
+            "comment": {"en-US": "Resource identifying a level of competence or grade that is achieved in the referenced Rubric by this CompetencyDefinition."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "RubricCriterionLevel"
+        },
+        {
+            "id:": "competencyStatement",
+            "type": "Property",
+            "label": {"en-US": "Competency Statement"},
+            "comment": {"en-US": "Human readable expression that describes a competency."} ,
+            "note": {"en-US": "This property is an unstructured, literal text of the CompetencyDefinition. The data value may be expressed in multiple languages with no more than one instance per language."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "langString"
+         },
+        {
+            "id:": "conformsTo",
+            "type":[ "Property", "Concept" ],
+            "label": {"en-US": "Conforms To"},
+            "comment": {"en-US": "An established standard to which the described resource conforms."},
+            "note": {"en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "domainIncludes": ["CompetencyDefinition", "CompetencyAssociation"],
+            "rangeIncludes": "Standard"
+        },
+        {
+            "id:": "description",
+            "type": "Property",
+            "label": {"en-US": "Description"},
+            "comment": {"en-US": "A narrative in plain language that describes and may contextualize the resource."},
+            "note": {"en-US": "The data value may be expressed in multiple languages with no more than one instance per language."},
+            "domainIncludes": [
+                "CompetencyDefinition",
+                "CompetencyFramework",
+                "Rubric",
+                "RubricCriterion",
+                "RubricCriterionLevel"
+            ],
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "destination",
+            "type": "Property",
+            "label": {"en-US": "Destination"},
+            "comment": {"en-US": "URL of the destination node in a CompetencyAssociation."},
+            "domainIncludes": "ResourceAssociation",
+            "rangeIncludes": "Resource"
+        },
+        {
+            "id:": "feedback",
+            "type": "Property",
+            "label": {"en-US": "Feedback"},
+            "comment": {"en-US": "Predefined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development."},
+            "domainIncludes": "RubricCriterionLevel",
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "hasCompetencyDefinition",
+            "type": "Property",
+            "label": {"en-US": "Has Competency Definition"},
+            "comment": {"en-US": "CompetencyDefinition within this framework."},
+            "domainIncludes": "CompetencyFramework",
+            "rangeIncludes": "CompetencyDefinition"
+        },
+        {
+            "id:": "hasMember",
+            "type": ["Property", "Concept"],
+            "label": {"en-US": "Has Member"},
+            "comment": {"en-US": "The destination resource is a member of this resource."},
+            "note": {"en-US": "This property implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."},
+            "domainIncludes": ["CompetencyAssociation", "CompetencyDefinition"],
+            "rangeIncludes": "CompetencyDefinition"
+        },
+        {
+            "id:": "hasPart",
+            "type": ["Property","Concept"],
+            "label": {"en-US": "Has Part"},
+            "comment": {"en-US": "The destination competenceis a part of the competence defined in this source."},
+            "note": {"en-US": "Non-Normative Note: This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "domainIncludes": ["CompetencyDefinition", "CompetencyAssociation"],
+            "rangeIncludes": "CompetencyDefinition"
+        },
+        {
+            "id:": "hasRubric",
+            "type": "Property",
+            "label": {"en-US": "Has Rubric"},
+            "comment": {"en-US": "Rubric required by this resource."},
+            "domainIncludes": "CompetencyFramework",
+            "rangeIncludes": "Rubric"
+        },
+        {
+            "id:": "hasSubFramework",
+            "type": ["Property","Concept"],
+            "label": {"en-US": "Has Sub-Framework"},
+            "comment": {"en-US": "The origin framework has a subframework identified by the destination."},
+            "note": {"en-US": "The hasSubframework property shall not be used unless both source and destination are CompetencyFrameworks.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "domainIncludes": ["CompetencyDefinition", "CompetencyAssociation"],
+            "rangeIncludes": "CompetencyFramework"
+        },
+        {
+            "id:": "id",
+            "type": "Property",
+            "label": {"en-US": "ID"},
+            "comment": {"en-US": "Unique uri that allows a system to retrieve or reference the resource."},
+            "note": {"en-US": "The value shall be unique across all systems that store or process the competency definition. In a JSON-LD serialization, this will be @id."},
+            "domainIncludes": ["CompetencyDefinition",
+                "CompetencyFramework",
+                "CompetencyAssociation",
+                "Rubric",
+                "RubricCriterion",
+                "RubricCriterionLevel"
+            ],
+            "rangeIncludes": "url"
+        },
+        {
+            "id:": "isSupportedBy",
+            "type": "Property",
+            "label": {"en-US": "Is Supported By"},
+            "comment": {"en-US": "The destination resource supports the ability to do or learn the source competency."},
+            "note": {"en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "CompetencyDefinition"
+        },
+        {
+            "id:": "method",
+            "type": "Property",
+            "label": {"en-US": "Method"},
+            "comment": {"en-US": "Indicates if the rubric is designed for manual or automated evaluation of a proficiency level."},
+            "domainIncludes": "Rubric",
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "name",
+            "type": "Property",
+            "label": {"en-US": "Name"},
+            "comment": {"en-US": "The name of the resource."},    
+            "domainIncludes": ["CompetencyDefinition",
+                "CompetencyFramework",
+                "Rubric",
+                "RubricCriterion",
+                "RubricCriterionLevel"
+            ],
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "originalFramework",
+            "type": "rdf:Property",
+            "label": {"en-US": "Original Framework"},
+            "comment": {"en-US": "Original competency framework which this resource is based on or derived from."},
+            "domainIncludes": "CompetencyFramework",
+            "rangeIncludes": "Resource" 
+        },
+        {
+            "id:": "position",
+            "type": "Property",
+            "label": {"en-US": "Position"},
+            "comment": {"en-US": "A numeric value representing this criterion's ordinal position in the criteria list for this rubric."},
+            "domainIncludes": ["RubricCriterion", "RubricCriterionLevel" ],
+            "rangeIncludes": "xsd:Integer"
+        },
+        {
+            "id:": "referenceCode",
+            "type": "Property",
+            "label": {"en-US": "Reference Code"},
+            "comment": {"en-US": "A human-decipherable identifier that uses a set of semantically cohesive categories or facets that are meaningfully combined, such as \"Math.G.C.A.2.\"  interpreted as subject=Mathematics, category=Geometry, strand=Circles, sub-strand=Arcs and an instance number"},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "langString"
+        },
+        {
+            "id:": "resourceAssociation",
+            "type": "Property",
+            "label": {"en-US": "Resource Association"},
+            "comment": {"en-US": "Url of a Resource used within this resource."}, 
+            "domainIncludes": ["CompetencyDefinition",
+                "CompetencyFramework"],
+            "rangeIncludes": "ResourceAssociation"
+        },
+        {
+            "id:": "requires",
+            "type": ["Property", "Concept"],
+            "label": {"en-US": "Requires"},
+            "comment": {"en-US": "The destination resource is essential before having the ability to do or learn the origin resource."},
+            "note": {"en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "CompetencyDefinition"
+        },
+        {
+            "id:": "rubric",
+            "type": "Property",
+            "label": {"en-US": "Rubric"},
+            "comment": {"en-US": "URL a Rubric object."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "Rubric"
+        },
+        {
+            "id:": "rubricCriterion",
+            "type": "Property",
+            "label": {"en-US": "Rubric Criterion"},
+            "comment": {"en-US": "Url of a rubricCriterion object."},
+            "domainIncludes": "Rubric",
+            "rangeIncludes": "RubricCriterion"
+        },
+        {
+            "id:": "rubricCriterionLevel",
+            "type": "Property",
+            "label": {"en-US": "Rubric Criterion Level"},
+            "comment": {"en-US": "Url of a rubricCriterionLevel object."},
+            "domainIncludes": "RubricCriterion",
+            "rangeIncludes": "RubricCriterionLevel"
+        },
+        {
+            "id:": "score",
+            "type": "Property",
+            "label": {"en-US": "Score"},
+            "comment": {"en-US": "The points awarded for achieving this level."},
+            "domainIncludes": "RubricCriterionLevel",
+            "note:": {"en-US": "Numeric - up to 3 digits after decimal"},
+            "rangeIncludes": "xsd:decimal"
+        },
+        {
+            "id:": "source",
+            "type": "Property",
+            "label": {"en-US": "Source"},
+            "comment": {"en-US": "URL of the origin node in a CompetencyAssociation."},
+            "domainIncludes": "CompetencyAssociation",
+            "rangeIncludes": "Resource"
+        },
+        {
+            "id:": "typeLabel",
+            "type": "Property",
+            "label": {"en-US": "Type Label"},
+            "note": {"en-US": "The label may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\").\n\nThe data value may be expressed in multiple languages with no more than one instance per language."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "rdf:langString"
+        },
+        {
+            "id:": "typeUrl",
+            "type": "Property",
+            "label": {"en-US": "Type URL"},
+            "comment": {"en-US": "URI of the type or category of the competency"},
+            "note": {"en-US": "A globally unique identifier for the type, class, or category of the competency. The referenced resource may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\"). It is a URI that may be a resolvable URL to CompetencyFramework metadata in linked data implementations."},
+            "domainIncludes": "CompetencyDefinition",
+            "rangeIncludes": "URL"
+        },
+        {
+            "id:": "weight",
+            "type": "Property",
+            "label": {"en-US": "Weight"},
+            "comment": {"en-US": "Indicates the relative significance this connection has for the destination node in a learning map."},
+            "domainIncludes": ["CompetencyAssociation", "RubricCriterion"],
+            "rangeIncludes": "xsd:decimal"
+        }
+    ]
+}
