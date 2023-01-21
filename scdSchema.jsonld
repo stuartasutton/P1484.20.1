@@ -1,5 +1,5 @@
 {
-	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/scdContext.json",
+	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/scdContext.jsonld",
 	"@graph": [
         {
             "@id": "CompetencyDefinition",
@@ -186,7 +186,7 @@
                 "RubricCriterion",
                 "RubricCriterionLevel"
             ],
-            "rangeIncludes": "url"
+            "rangeIncludes": "sdo:url"
         },
         {
             "@id": "isSupportedBy",
@@ -210,7 +210,7 @@
             "@type": "Property",
             "label": {"en-US": "Name"},
             "comment": {"en-US": "The name of the resource."},
-            "note": {"en-US": "The data value may be expressed in multiple languages with no more than one instance per language."} ;    
+            "note": {"en-US": "The data value may be expressed in multiple languages with no more than one instance per language."} ,    
             "domainIncludes": ["CompetencyDefinition",
                 "CompetencyFramework",
                 "Rubric",
