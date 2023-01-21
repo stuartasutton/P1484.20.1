@@ -1,5 +1,5 @@
 {
-	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/rcdContext.json",
+	"@context": "https://github.com/stuartasutton/P1484.20.1/blob/main/scdContext.json",
 	"@graph": [
         {
             "id:": "CompetencyDefinition",
