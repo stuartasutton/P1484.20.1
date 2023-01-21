@@ -10,36 +10,40 @@
 scd:CompetencyDefinition a rdfs:Class ;
     rdfs:label "Competency Definition"@en-US ;
     rdfs:comment "A resource that states a capability or behavior that an actor may learn or be able to do within a given context with references to potential levels of competence, a mastery threshold, and other contextualizing metadata."@en-US ;
-    skos:note "Comment: Actors may include persons, teams and organizations."@en-US .
+    skos:note "Actors may include persons, teams and organizations."@en-US .
 
 scd:CompetencyFramework a rdfs:Class ;
     rdfs:label "Competency Framework"@en-US ;
     rdfs:comment "A resource that identifies a collection of logically related Competency Definitions, Competency Associations, and contextualizing metadata."@en-US .
     
+rdfs:Resource a rdfs:Class ;
+    rdfs:label "Resource"@en-US ;
+    rdfs:comment "Class of anything that can be identified with a Universal Resource Identifier (URI)."@en-US .            
+    
 scd:ResourceAssociation a rdfs:Class ;
     rdfs:label "ResourceAssociation"@en-US ;
     rdfs:comment "A resource that defines a relationship between two resources."@en-US ;
-    skos:note "Comment: The ResourceAssociation is used to relate one CompetencyDefinition to another CompetencyDefinition or to any other resource within or without a CompetencyFramework including resources such as controlled vocabulary terms (concepts), jobs, and assessment instruments."@en-US .
+    skos:note "The ResourceAssociation is used to relate one CompetencyDefinition to another CompetencyDefinition or to any other resource within or without a CompetencyFramework including resources such as controlled vocabulary terms (concepts), jobs, and assessment instruments."@en-US .
  
 scd:Rubric a rdfs:Class ;
     rdfs:label "Rubric"@en-US ;
     rdfs:comment "A resource that defines a set of criteria or indicators that assist in determining whether an entity possesses a given competence or level of proficiency in a task or work product."@en-US ;
-    skos:note "Comment: A Rubric may have one or more instances of RubricCriterion."@en-US .
+    skos:note "A Rubric may have one or more instances of RubricCriterion."@en-US .
     
 scd:RubricCriterion a rdfs:Class ;
     rdfs:label "Rubric Criterion"@en-US ;
     rdfs:comment "A resource that defines a single criterion by which one aspect of an entity’s competence may be evaluated."@en-US ;
-    skos:note "Comment: Points to any number of instances of RubricCriterionLevel."@en-US . 
+    skos:note "Points to any number of instances of RubricCriterionLevel."@en-US . 
 
 scd:RubricCriterionLevel a rdfs:Class ;
     rdfs:label "CriterionLevel"@en-US ;
-    rdfs:comment "A degree or level of competence."@en-US .
+    rdfs:comment "Resource that degree or level of competence."@en-US .
     
 scd:associationType a rdf:Property ;
     rdfs:label "Association Type"@en-US ;
     rdfs:comment "Type of the association between two resources."@en-US ;
     schema:domainIncludes scd:ResourceAssociation ;
-    schema:rangeIncludes skos:Concept, rdf:Property .
+    schema:rangeIncludes rdf:Property .
 
 scd:category a rdf:Property ;
     rdfs:label "Category"@en-US ;
@@ -48,12 +52,6 @@ scd:category a rdf:Property ;
     schema:domainIncludes scd:RubricCriterion ;
     schema:rangeIncludes rdf:langString .
 
-scd:competencyFramework a rdf:Property ;
-    rdfs:label "Competency Framework"@en-US ;
-    rdfs:comment "CompetencyFramework to which this item belongs."@en-US ;
-    schema:domainIncludes scd:CompetencyDefinition ;
-    schema:rangeIncludes scd:CompetencyFramework .
-    
 scd:competencyLevel a rdf:Property ;
     rdfs:label "Competency Level"@en-US ;
     rdfs:comment "Resource identifying a level of competence or grade that is achieved in the referenced Rubric by this CompetencyDefinition."@en-US ;
@@ -69,7 +67,7 @@ scd:competencyLevel a rdf:Property ;
     
 scd:conformsTo a rdf:Property, skos:concept ;
     rdfs:label "Conforms To"@en-US ;
-    rdfs:comment "An established standard to which the described resource conforms."@en-US ;
+    rdfs:comment "Destination is an established standard to which the origin resource confomes."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."@en-US ;
     owl:equivalentProperty dct:conformsTo ;
     schema:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
@@ -89,13 +87,14 @@ scd:description a rdf:Property ;
     
 scd:destination a rdf:Property ;
     rdfs:label "Destination"@en-US ;
-    rdfs:comment "URL of the destination node in a CompetencyAssociation."@en-US ;
+    rdfs:comment "Destination node in a ResourceAssociation."@en-US ;
     schema:domainIncludes scd:ResourceAssociation ;
     schema:rangeIncludes rdfs:Resource .
     
 scd:feedback a rdf:Property ;
     rdfs:label "Feedback"@en-US ;
     rdfs:comment "Predefined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development."@en-US ;
+    skos:note "Data value may be expressed in multiple languages with no more than one instance per language."@en-US ; 
     schema:domainIncludes scd:RubricCriterionLevel ;
     schema:rangeIncludes rdf:langString .
     
@@ -104,18 +103,24 @@ scd:hasCompetencyDefinition a rdf:Property ;
     rdfs:comment "CompetencyDefinition within this framework."@en-US ;
     schema:domainIncludes scd:CompetencyFramework ;
     schema:rangeIncludes scd:CompetencyDefinition .
+    
+scd:hasCompetencyFramework a rdf:Property ;
+    rdfs:label "Has Competency Framework"@en-US ;
+    rdfs:comment "CompetencyFramework to which this item belongs."@en-US ;
+    schema:domainIncludes scd:CompetencyDefinition ;
+    schema:rangeIncludes scd:CompetencyFramework .
    
 scd:hasMember a rdf:Property, skos:Concept ;
     rdfs:label "Has Member"@en-US ;
     rdfs:comment "The destination resource is a member of this resource."@en-US ;
-    skos:note "This property implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
+    skos:note "skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
     schema:domainIncludes scd:ResourceAssociation, scd:CompetencyDefinition ;
     schema:rangeIncludes scd:CompetencyDefinition . 
 
 scd:hasPart a rdf:Property, skos:Concept ;
     rdfs:label "Has Part"@en-US ;
-    rdfs:comment "The destination competenceis a part of the competence defined in this source."@en-US ;
-    skos:note """Non-Normative Note: This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ;
+    rdfs:comment "The destination competence is a part of the competence defined in this source."@en-US ;
+    skos:note """This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ;
     schema:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
     schema:rangeIncludes scd:CompetencyDefinition .
     
@@ -128,13 +133,13 @@ scd:hasRubric a rdf:Property ;
 scd:hasSubFramework a rdf:Property, skos:Concept ;
     rdfs:label "Has Sub-Framework"@en-US ;
     rdfs:comment "The origin framework has a subframework identified by the destination."@en-US ;
-    skos:note """The hasSubframework property shall not be used unless both source and destination are CompetencyFrameworks.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ;
+    skos:note """The hasSubframework property shall not be used unless both source and destination are CompetencyFrameworks.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."""@en-US ;
     schema:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
     schema:rangeIncludes scd:CompetencyFramework .   
  
 scd:id a rdf:Property ;
     rdfs:label "ID"@en-US ;
-    rdfs:comment "Unique uri that allows a system to retrieve or reference the resource."@en-US ;
+    rdfs:comment Identifier that allows a system to retrieve or reference the resource."@en-US ;
     schema:domainIncludes 
         scd:CompetencyDefinition,
         scd:CompetencyFramework,
@@ -147,19 +152,20 @@ scd:id a rdf:Property ;
 scd:isSupportedBy a rdf:Property, skos:Concept  ;
     rdfs:label "Is Supported By"@en-US ;
     rdfs:comment "The destination resource supports the ability to do or learn the source competency."@en-US ;
-    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."@en-US ;
+    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
     schema:rangeIncludes scd:CompetencyDefinition .
     
 scd:method a rdf:Property ;
     rdfs:label "Method"@en-US ;
-    rdfs:comment "Indicates if the rubric is designed for manual or automated evaluation of a proficiency level."@en-US ;
+    rdfs:comment "Whether a rubric is designed for manual or automated evaluation of a proficiency level."@en-US ;
     schema:domainIncludes scd:Rubric ;
-    schema:rangeIncludes rdf:langString . 
+    schema:rangeIncludes skos:Concept . 
     
 scd:name a rdf:Property ;
     rdfs:label "Name"@en-US ;
     rdfs:comment "The name of the resource."@en-US ;
+    skos:note "The data value may be expressed in multiple languages with no more than one instance per language." ;
     schema:domainIncludes 
         scd:CompetencyDefinition,
         scd:CompetencyFramework,
@@ -172,11 +178,11 @@ scd:originalFramework a rdf:Property ;
     rdfs:label "Original Framework"@en-US ;
     rdfs:comment "Original competency framework which this resource is based on or derived from."@en-US ;
     schema:domainIncludes scd:CompetencyFramework ;
-    schema:rangeIncludes rdfs:Resource" .
+    schema:rangeIncludes scd:CompetencyFramework" .
     
 scd:position a rdf:Property ;
     rdfs:label "Position"@en-US ;
-    rdfs:comment "A numeric value representing this criterion's ordinal position in the criteria list for this rubric."@en-US ;
+    rdfs:comment "Numeric value representing this criterion's ordinal position in the criteria list for this rubric."@en-US ;
     schema:domainIncludes 
         scd:RubricCriterion,
         scd:RubricCriterionLevel ;
@@ -184,15 +190,17 @@ scd:position a rdf:Property ;
     
 scd:referenceCode a rdf:Property ;
     rdfs:label "Reference Code"@en-US ;
-    rdfs:comment "A human-decipherable identifier that uses a set of semantically cohesive categories or facets that are meaningfully combined, such as \"Math.G.C.A.2.\"  interpreted as subject=Mathematics, category=Geometry, strand=Circles, sub-strand=Arcs and an instance number"@en-US ;
+    rdfs:comment "A human-decipherable identifier that uses a set of semantically cohesive categories or facets that are meaningfully combined, such as \"Math.G.C.A.2.\"  interpreted as subject=Mathematics, category=Geometry, strand=Circles, sub-strand=Arcs and an instance number."@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
-    schema:rangeIncludes rdf:langString .
+    schema:rangeIncludes rdfs:Literal .
     
 scd:requires a rdf:Property, skos:Concept ;
     rdfs:label "Requires"@en-US ;
-    rdfs:comment "The destination resource is essential before having the ability to do or learn the origin resource."@en-US ;
-    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."@en-US;
-    schema:domainIncludes scd:CompetencyDefinition ;
+    rdfs:comment "Attainment of the destination resource is essential before having the ability to do or learn the origin resource."@en-US ;
+    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US;
+    schema:domainIncludes 
+        scd:CompetencyDefinition ,
+        scd:ResourceAssociation ;
     schema:rangeIncludes scd:CompetencyDefinition .
 
 scd:resourceAssociation a rdf:Property ;
@@ -210,28 +218,34 @@ scd:rubric a rdf:Property ;
     
 scd:rubricCriterion a rdf:Property ;
     rdfs:label "Rubric Criterion"@en-US ;
-    rdfs:comment "Url of a rubricCriterion object."@en-US ;
+    rdfs:comment "RubricCriterion instance."@en-US ;
     schema:domainIncludes scd:Rubric ;
     schema:rangeIncludes scd:RubricCriterion .
     
 scd:rubricCriterionLevel a rdf:Property ;
     rdfs:label "Rubric Criterion Level"@en-US ;
-    rdfs:comment "Url of a rubricCriterionLevel object."@en-US ;
+    rdfs:comment "RubricCriterionLevel resource."@en-US ;
     schema:domainIncludes scd:RubricCriterion ;
     schema:rangeIncludes scd:RubricCriterionLevel .
 
 scd:score a rdf:Property ;
     rdfs:label "Score"@en-US ;
-    rdfs:comment "The points awarded for achieving this level."@en-US ;
+    rdfs:comment "Points awarded for achieving this level."@en-US ;
     schema:domainIncludes scd:RubricCriterionLevel ;
-    skos:note: "Numeric - up to 3 digits after decimal"@en-US ;
     schema:rangeIncludes xsd:decimal .
 
 scd:source a rdf:Property ;
     rdfs:label "Source"@en-US ;
-    rdfs:comment "URL of the origin node in a CompetencyAssociation."@en-US ;
+    rdfs:comment "Origin node in a ResourceAssociation."@en-US ;
     schema:domainIncludes scd:ResourceAssociation ;
     schema:rangeIncludes rdfs:Resource .
+    
+scd:type a rdf:Property ;
+    rdfs:label "Type"@en-US ;
+    rdfs:comment "Type, class or category of the competency"@en-US ;
+    skos:note "The referenced resource is a type defining: (a) level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\", \"task\"); (2) functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or (3) a category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of mind or practice\").\n\nThe preference is for the types to be defined as concepts (skos:Concept) in a machine-actionable concept scheme (skos:ConceptScheme)."@en-US ;
+    schema:domainIncludes scd:CompetencyDefinition\n\nThe preference is for the types to be defined as concepts (skos:Concept) in a machine-actionable concept scheme (skos:ConceptScheme). ;
+    schema:rangeIncludes schema:URL .
 
 scd:typeLabel a rdf:Property ;
     rdfs:label "Type Label"@en-US ;
@@ -239,14 +253,7 @@ scd:typeLabel a rdf:Property ;
     skos:note """The label may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\").\n\nThe data value may be expressed in multiple languages with no more than one instance per language."""@en-US ;
     schema:domainIncludes scd:CompetencyDefinition ;
     schema:rangeIncludes rdf:langString .
-       
-scd:typeUrl a rdf:Property ;
-    rdfs:label "Type URL"@en-US ;
-    rdfs:comment "URI of the type or category of the competency"@en-US ;
-    skos:note "A globally unique identifier for the type, class, or category of the competency. The referenced resource may indicate the CompetencyDefinition level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\") its functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of practice\"). It is a URI that may be a resolvable URL to CompetencyFramework metadata in linked data implementations."@en-US ;
-    schema:domainIncludes scd:CompetencyDefinition ;
-    schema:rangeIncludes schema:URL .
-    
+           
 scd:weight a rdf:Property ;
     rdfs:label "Weight"@en-US ;
     rdfs:comment "Indicates the relative significance this connection has for the destination node in a learning map."@en-US ;
