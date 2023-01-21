@@ -58,7 +58,7 @@ scd:competencyLevel a rdf:Property ;
     schema:domainIncludes scd:CompetencyDefinition ;
     schema:rangeIncludes scd:RubricCriterionLevel .
     
- scd:competencyStatement a rdf:Property ;
+scd:competencyStatement a rdf:Property ;
     rdfs:label "Competency Statement"@en-US ;
     rdfs:comment "Human readable expression that describes a competency."@en-US ;
     skos:note "This property is an unstructured, literal text of the CompetencyDefinition. The data value may be expressed in multiple languages with no more than one instance per language."@en-US ;
