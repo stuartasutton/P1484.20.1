@@ -208,13 +208,7 @@ scd:resourceAssociation a rdf:Property ;
     rdfs:comment "ResourceAssociation used within this resource."@en-US ;
     sdo:domainIncludes scd:CompetencyDefinition,
         scd:CompetencyFramework ;
-    sdo:rangeIncludes scd:ResourceAssociation .   
-    
-scd:rubric a rdf:Property ;
-    rdfs:label "Rubric"@en-US ;
-    rdfs:comment "URL a Rubric object."@en-US ;
-    sdo:domainIncludes scd:CompetencyDefinition ;
-    sdo:rangeIncludes scd:Rubric .
+    sdo:rangeIncludes scd:ResourceAssociation .     
     
 scd:rubricCriterion a rdf:Property ;
     rdfs:label "Rubric Criterion"@en-US ;

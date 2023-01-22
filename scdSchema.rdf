@@ -75,7 +75,7 @@
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#conformsTo">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:label xml:lang="en-US">Conforms To</rdfs:label>
     <rdfs:comment xml:lang="en-US">Destination is an established standard to which the origin resource confomes.</rdfs:comment>
     <skos:note xml:lang="en-US">This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation.</skos:note>
