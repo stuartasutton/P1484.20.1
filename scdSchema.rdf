@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<<?xml version="1.0" encoding="utf-8" ?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-         xmlns:ns0="https://schema.org/"
+         xmlns:sdo="https://schema.org/"
          xmlns:owl="http://www.w3.org/2002/07/owl#">
 
   <rdfs:Class rdf:about="https://opensource.ieee.org/scd#CompetencyDefinition">
@@ -47,31 +47,31 @@
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#associationType">
     <rdfs:label xml:lang="en-US">Association Type</rdfs:label>
     <rdfs:comment xml:lang="en-US">Type of the association between two resources.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#category">
     <rdfs:label xml:lang="en-US">Category</rdfs:label>
     <rdfs:comment xml:lang="en-US">Textual label for the category by which rubricCriterion may be grouped.</rdfs:comment>
     <skos:note xml:lang="en-US">Comment: The data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#competencyLevel">
     <rdfs:label xml:lang="en-US">Competency Level</rdfs:label>
     <rdfs:comment xml:lang="en-US">Resource identifying a level of competence or grade that is achieved in the referenced Rubric by this CompetencyDefinition.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#competencyStatement">
     <rdfs:label xml:lang="en-US">Competency Statement</rdfs:label>
     <rdfs:comment xml:lang="en-US">Human readable expression that describes a competency.</rdfs:comment>
     <skos:note xml:lang="en-US">This property is an unstructured, literal text of the CompetencyDefinition. The data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#conformsTo">
@@ -80,50 +80,50 @@
     <rdfs:comment xml:lang="en-US">Destination is an established standard to which the origin resource confomes.</rdfs:comment>
     <skos:note xml:lang="en-US">This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation.</skos:note>
     <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/conformsTo"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#description">
     <rdfs:label xml:lang="en-US">Description</rdfs:label>
     <rdfs:comment xml:lang="en-US">A narrative in plain language that describes and may contextualize the resource.</rdfs:comment>
     <skos:note xml:lang="en-US">The data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#destination">
     <rdfs:label xml:lang="en-US">Destination</rdfs:label>
     <rdfs:comment xml:lang="en-US">Destination node in a ResourceAssociation.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#feedback">
     <rdfs:label xml:lang="en-US">Feedback</rdfs:label>
     <rdfs:comment xml:lang="en-US">Predefined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development.</rdfs:comment>
     <skos:note xml:lang="en-US">Data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasCompetencyDefinition">
     <rdfs:label xml:lang="en-US">Has Competency Definition</rdfs:label>
     <rdfs:comment xml:lang="en-US">CompetencyDefinition within this framework.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasCompetencyFramework">
     <rdfs:label xml:lang="en-US">Has Competency Framework</rdfs:label>
     <rdfs:comment xml:lang="en-US">CompetencyFramework to which this item belongs.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasMember">
@@ -131,9 +131,9 @@
     <rdfs:label xml:lang="en-US">Has Member</rdfs:label>
     <rdfs:comment xml:lang="en-US">The destination resource is a member of this resource.</rdfs:comment>
     <skos:note xml:lang="en-US">This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasPart">
@@ -143,16 +143,16 @@
     <skos:note xml:lang="en-US">This may be used for example to declare that a &quot;task&quot; is part of a &quot;job&quot; OR  a &quot;skill&quot; is part of a &quot;task&quot; OR  a Measure of Effectiveness is part of a &quot;skill&quot; definition. This implies that all of the child objects define the parent object.
 
 This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on Resource++++Association.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasRubric">
     <rdfs:label xml:lang="en-US">Has Rubric</rdfs:label>
     <rdfs:comment xml:lang="en-US">Rubric required by this resource.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#hasSubFramework">
@@ -162,21 +162,21 @@ This term may be used as either a property on CompetencyDefinition or as a conce
     <skos:note xml:lang="en-US">The hasSubframework property shall not be used unless both source and destination are CompetencyFrameworks.
 
 This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#id">
     <rdfs:label xml:lang="en-US">ID</rdfs:label>
     <rdfs:comment xml:lang="en-US">Identifier that allows a system to retrieve or reference the resource.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="https://schema.org/url"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/url"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#isSupportedBy">
@@ -184,49 +184,49 @@ This term may be used as either a property on CompetencyDefinition or as a conce
     <rdfs:label xml:lang="en-US">Is Supported By</rdfs:label>
     <rdfs:comment xml:lang="en-US">The destination resource supports the ability to do or learn the source competency.</rdfs:comment>
     <skos:note xml:lang="en-US">This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#method">
     <rdfs:label xml:lang="en-US">Method</rdfs:label>
     <rdfs:comment xml:lang="en-US">Whether a rubric is designed for manual or automated evaluation of a proficiency level.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#name">
     <rdfs:label xml:lang="en-US">Name</rdfs:label>
     <rdfs:comment xml:lang="en-US">The name of the resource.</rdfs:comment>
     <skos:note>The data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#originalFramework">
     <rdfs:label xml:lang="en-US">Original Framework</rdfs:label>
     <rdfs:comment xml:lang="en-US">Original competency framework which this resource is based on or derived from.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#position">
     <rdfs:label xml:lang="en-US">Position</rdfs:label>
     <rdfs:comment xml:lang="en-US">Numeric value representing this criterion's ordinal position in the criteria list for this rubric.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#Integer"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#Integer"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#referenceCode">
     <rdfs:label xml:lang="en-US">Reference Code</rdfs:label>
     <rdfs:comment xml:lang="en-US">A human-decipherable identifier that uses a set of semantically cohesive categories or facets that are meaningfully combined, such as &quot;Math.G.C.A.2.&quot;  interpreted as subject=Mathematics, category=Geometry, strand=Circles, sub-strand=Arcs and an instance number.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#requires">
@@ -234,52 +234,45 @@ This term may be used as either a property on CompetencyDefinition or as a conce
     <rdfs:label xml:lang="en-US">Requires</rdfs:label>
     <rdfs:comment xml:lang="en-US">Attainment of the destination resource is essential before having the ability to do or learn the origin resource.</rdfs:comment>
     <skos:note xml:lang="en-US">This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#resourceAssociation">
     <rdfs:label xml:lang="en-US">Resource Association</rdfs:label>
     <rdfs:comment xml:lang="en-US">ResourceAssociation used within this resource.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-  </rdf:Property>
-
-  <rdf:Property rdf:about="https://opensource.ieee.org/scd#rubric">
-    <rdfs:label xml:lang="en-US">Rubric</rdfs:label>
-    <rdfs:comment xml:lang="en-US">URL a Rubric object.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyFramework"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#rubricCriterion">
     <rdfs:label xml:lang="en-US">Rubric Criterion</rdfs:label>
     <rdfs:comment xml:lang="en-US">RubricCriterion instance.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#Rubric"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#rubricCriterionLevel">
     <rdfs:label xml:lang="en-US">Rubric Criterion Level</rdfs:label>
     <rdfs:comment xml:lang="en-US">RubricCriterionLevel resource.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:rangeIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#score">
     <rdfs:label xml:lang="en-US">Score</rdfs:label>
     <rdfs:comment xml:lang="en-US">Points awarded for achieving this level.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterionLevel"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#source">
     <rdfs:label xml:lang="en-US">Source</rdfs:label>
     <rdfs:comment xml:lang="en-US">Origin node in a ResourceAssociation.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#type">
@@ -288,8 +281,8 @@ This term may be used as either a property on CompetencyDefinition or as a conce
     <skos:note xml:lang="en-US">The referenced resource is a type defining: (a) level in a hierarchical framework (e.g. &quot;subject&quot;, &quot;strand&quot;, &quot;standard&quot;, &quot;benchmark&quot;, &quot;indicator&quot;, &quot;task&quot;); (2) functional class (e.g. &quot;condition&quot;, &quot;context&quot;, &quot;criteria&quot;, &quot;outcome&quot;), or (3) a category (e.g. &quot;knowledge&quot;, &quot;skill&quot;, &quot;ability&quot;, &quot;behavior&quot;, &quot;habit of mind or practice&quot;).
 
 The preference is for the types to be defined as concepts (skos:Concept) in a machine-actionable concept scheme (skos:ConceptScheme).</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="https://schema.org/URL"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/URL"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#typeLabel">
@@ -298,16 +291,16 @@ The preference is for the types to be defined as concepts (skos:Concept) in a ma
     <skos:note xml:lang="en-US">The label may indicate the CompetencyDefinition level in a hierarchical framework (e.g. &quot;subject&quot;, &quot;strand&quot;, &quot;standard&quot;, &quot;benchmark&quot;, &quot;indicator&quot;) its functional class (e.g. &quot;condition&quot;, &quot;context&quot;, &quot;criteria&quot;, &quot;outcome&quot;), or category (e.g. &quot;knowledge&quot;, &quot;skill&quot;, &quot;ability&quot;, &quot;behavior&quot;, &quot;habit of practice&quot;).
 
 The data value may be expressed in multiple languages with no more than one instance per language.</skos:note>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#CompetencyDefinition"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </rdf:Property>
 
   <rdf:Property rdf:about="https://opensource.ieee.org/scd#weight">
     <rdfs:label xml:lang="en-US">Weight</rdfs:label>
     <rdfs:comment xml:lang="en-US">Indicates the relative significance this connection has for the destination node in a learning map.</rdfs:comment>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
-    <ns0:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
-    <ns0:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#ResourceAssociation"/>
+    <sdo:domainIncludes rdf:resource="https://opensource.ieee.org/scd#RubricCriterion"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </rdf:Property>
 
 </rdf:RDF>
