@@ -65,7 +65,7 @@ scd:competencyStatement a rdf:Property ;
     sdo:domainIncludes scd:CompetencyDefinition ;
     sdo:rangeIncludes rdf:langString .
     
-scd:conformsTo a rdf:Property, skos:concept ;
+scd:conformsTo a rdf:Property, skos:Concept ;
     rdfs:label "Conforms To"@en-US ;
     rdfs:comment "Destination is an established standard to which the origin resource confomes."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
