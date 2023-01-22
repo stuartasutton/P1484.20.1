@@ -15,8 +15,8 @@
             "comment": {"en-US" :"A resource that identifies a collection of logically related Competency Definitions, Competency Associations, and contextualizing metadata."}
         },
         {
-            "@id": "rdfs:Resource",
-            "@type": "rdfs:Class",
+            "@id": "Resource",
+            "@type": "Class",
             "rdfs:label": {"en-US": "Resource"},
             "rdfs:Comment":  {"en-US": "Class of anything that can be identified with a Universal Resource Identifier (URI)."},
             "rdfs:isDefinedBy": "rdfs:"
