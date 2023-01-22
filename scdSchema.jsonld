@@ -54,7 +54,7 @@
             "@type": "rdf:Property",
             "label": {"en-US": "Association Type"},    
             "comment": {"en-US": "Type of the association between two resources."},
-            "domainIncludes": "CompetencyAssociation",
+            "domainIncludes": "ResourceAssociation",
             "rangeIncludes": "Property"
         },
         {
@@ -88,8 +88,8 @@
             "@type":[ "Property", "Concept" ],
             "label": {"en-US": "Conforms To"},
             "comment": {"en-US": "Destination is an established standard to which the origin resource confomes."},
-            "note": {"en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
-            "domainIncludes": ["CompetencyDefinition", "CompetencyAssociation"],
+            "note": {"en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."},
+            "domainIncludes": ["CompetencyDefinition", "ResourceAssociation"],
             "rangeIncludes": "Standard"
         },
         {
@@ -111,7 +111,7 @@
             "@id": "destination",
             "@type": "Property",
             "label": {"en-US": "Destination"},
-            "comment": {"en-US": "URL of the destination node in a CompetencyAssociation."},
+            "comment": {"en-US": "URL of the destination node in a ResourceAssociation."},
             "domainIncludes": "ResourceAssociation",
             "rangeIncludes": "Resource"
         },
@@ -154,7 +154,7 @@
             "@type": ["Property","Concept"],
             "label": {"en-US": "Has Part"},
             "comment": {"en-US": "The destination competence is a part of the competence defined in this source."},
-            "note": {"en-US": "This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."},
+            "note": {"en-US": "This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."},
             "domainIncludes": ["CompetencyDefinition", "ResourceAssociation"],
             "rangeIncludes": "CompetencyDefinition"
         },
@@ -290,8 +290,8 @@
             "@id": "source",
             "@type": "Property",
             "label": {"en-US": "Source"},
-            "comment": {"en-US": "URL of the origin node in a CompetencyAssociation."},
-            "domainIncludes": "CompetencyAssociation",
+            "comment": {"en-US": "URL of the origin node in a ResourceAssociation."},
+            "domainIncludes": "ResourceAssociation",
             "rangeIncludes": "Resource"
         },
         {

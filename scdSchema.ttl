@@ -68,7 +68,7 @@ scd:competencyStatement a rdf:Property ;
 scd:conformsTo a rdf:Property, skos:concept ;
     rdfs:label "Conforms To"@en-US ;
     rdfs:comment "Destination is an established standard to which the origin resource confomes."@en-US ;
-    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."@en-US ;
+    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
     owl:equivalentProperty dct:conformsTo ;
     sdo:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
     sdo:rangeIncludes dct:Standard .
@@ -113,14 +113,14 @@ scd:hasCompetencyFramework a rdf:Property ;
 scd:hasMember a rdf:Property, skos:Concept ;
     rdfs:label "Has Member"@en-US ;
     rdfs:comment "The destination resource is a member of this resource."@en-US ;
-    skos:note "skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
+    skos:note "skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
     sdo:domainIncludes scd:ResourceAssociation, scd:CompetencyDefinition ;
     sdo:rangeIncludes scd:CompetencyDefinition . 
 
 scd:hasPart a rdf:Property, skos:Concept ;
     rdfs:label "Has Part"@en-US ;
     rdfs:comment "The destination competence is a part of the competence defined in this source."@en-US ;
-    skos:note """This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on CompetencyAssociation."""@en-US ;
+    skos:note """This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."""@en-US ;
     sdo:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
     sdo:rangeIncludes scd:CompetencyDefinition .
     
