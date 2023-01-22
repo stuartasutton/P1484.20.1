@@ -1,4 +1,4 @@
-@prefix scd: <https://opensource.ieee.org/scd/v2022.json#> .
+@prefix scd: <https://opensource.ieee.org/scd#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -113,7 +113,7 @@ scd:hasCompetencyFramework a rdf:Property ;
 scd:hasMember a rdf:Property, skos:Concept ;
     rdfs:label "Has Member"@en-US ;
     rdfs:comment "The destination resource is a member of this resource."@en-US ;
-    skos:note "skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
+    skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
     sdo:domainIncludes scd:ResourceAssociation, scd:CompetencyDefinition ;
     sdo:rangeIncludes scd:CompetencyDefinition . 
 
@@ -139,7 +139,7 @@ scd:hasSubFramework a rdf:Property, skos:Concept ;
  
 scd:id a rdf:Property ;
     rdfs:label "ID"@en-US ;
-    rdfs:comment Identifier that allows a system to retrieve or reference the resource."@en-US ;
+    rdfs:comment "Identifier that allows a system to retrieve or reference the resource."@en-US ;
     sdo:domainIncludes 
         scd:CompetencyDefinition,
         scd:CompetencyFramework,
@@ -178,7 +178,7 @@ scd:originalFramework a rdf:Property ;
     rdfs:label "Original Framework"@en-US ;
     rdfs:comment "Original competency framework which this resource is based on or derived from."@en-US ;
     sdo:domainIncludes scd:CompetencyFramework ;
-    sdo:rangeIncludes scd:CompetencyFramework" .
+    sdo:rangeIncludes scd:CompetencyFramework .
     
 scd:position a rdf:Property ;
     rdfs:label "Position"@en-US ;
@@ -244,7 +244,7 @@ scd:type a rdf:Property ;
     rdfs:label "Type"@en-US ;
     rdfs:comment "Type, class or category of the competency"@en-US ;
     skos:note "The referenced resource is a type defining: (a) level in a hierarchical framework (e.g. \"subject\", \"strand\", \"standard\", \"benchmark\", \"indicator\", \"task\"); (2) functional class (e.g. \"condition\", \"context\", \"criteria\", \"outcome\"), or (3) a category (e.g. \"knowledge\", \"skill\", \"ability\", \"behavior\", \"habit of mind or practice\").\n\nThe preference is for the types to be defined as concepts (skos:Concept) in a machine-actionable concept scheme (skos:ConceptScheme)."@en-US ;
-    sdo:domainIncludes scd:CompetencyDefinition\n\nThe preference is for the types to be defined as concepts (skos:Concept) in a machine-actionable concept scheme (skos:ConceptScheme). ;
+    sdo:domainIncludes scd:CompetencyDefinition;
     sdo:rangeIncludes sdo:URL .
 
 scd:typeLabel a rdf:Property ;
@@ -261,4 +261,3 @@ scd:weight a rdf:Property ;
         scd:ResourceAssociation,
         scd:RubricCriterion ;
     sdo:rangeIncludes xsd:decimal .
-    
