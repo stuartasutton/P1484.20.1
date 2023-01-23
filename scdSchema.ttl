@@ -65,7 +65,7 @@ scd:competencyStatement a rdf:Property ;
     sdo:domainIncludes scd:CompetencyDefinition ;
     sdo:rangeIncludes rdf:langString .
     
-scd:conformsTo a rdf:Property, skos:Concept ;
+scd:conformsTo a rdf:Property ;
     rdfs:label "Conforms To"@en-US ;
     rdfs:comment "Destination is an established standard to which the origin resource confomes."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
@@ -110,14 +110,14 @@ scd:hasCompetencyFramework a rdf:Property ;
     sdo:domainIncludes scd:CompetencyDefinition ;
     sdo:rangeIncludes scd:CompetencyFramework .
    
-scd:hasMember a rdf:Property, skos:Concept ;
+scd:hasMember a rdf:Property ;
     rdfs:label "Has Member"@en-US ;
     rdfs:comment "The destination resource is a member of this resource."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation. This term implies that the member belongs to the source but does not necessarily define it. This list of all the members does not imply the whole of the source."@en-US ;
     sdo:domainIncludes scd:ResourceAssociation, scd:CompetencyDefinition ;
     sdo:rangeIncludes scd:CompetencyDefinition . 
 
-scd:hasPart a rdf:Property, skos:Concept ;
+scd:hasPart a rdf:Property ;
     rdfs:label "Has Part"@en-US ;
     rdfs:comment "The destination competence is a part of the competence defined in this source."@en-US ;
     skos:note """This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on Resource++++Association."""@en-US ;
@@ -130,7 +130,7 @@ scd:hasRubric a rdf:Property ;
     sdo:domainIncludes scd:CompetencyFramework ;
     sdo:rangeIncludes scd:Rubric .
     
-scd:hasSubFramework a rdf:Property, skos:Concept ;
+scd:hasSubFramework a rdf:Property;
     rdfs:label "Has Sub-Framework"@en-US ;
     rdfs:comment "The origin framework has a subframework identified by the destination."@en-US ;
     skos:note """The hasSubframework property shall not be used unless both source and destination are CompetencyFrameworks.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."""@en-US ;
@@ -149,7 +149,7 @@ scd:id a rdf:Property ;
         scd:RubricCriterionLevel ;
     sdo:rangeIncludes sdo:url .
           
-scd:isSupportedBy a rdf:Property, skos:Concept  ;
+scd:isSupportedBy a rdf:Property;
     rdfs:label "Is Supported By"@en-US ;
     rdfs:comment "The destination resource supports the ability to do or learn the source competency."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
@@ -194,7 +194,7 @@ scd:referenceCode a rdf:Property ;
     sdo:domainIncludes scd:CompetencyDefinition ;
     sdo:rangeIncludes rdfs:Literal .
     
-scd:requires a rdf:Property, skos:Concept ;
+scd:requires a rdf:Property ;
     rdfs:label "Requires"@en-US ;
     rdfs:comment "Attainment of the destination resource is essential before having the ability to do or learn the origin resource."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US;
