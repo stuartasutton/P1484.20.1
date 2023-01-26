@@ -2,7 +2,7 @@
     "@context": {
         "ceds": "https://ceds.ed.gov/element/",
         "dct": "http://purl.org/dc/terms/",
-        "scd": "https://opensource.ieee.org/rcd/v2021.json#",
+        "scd": "https://opensource.ieee.org/scd/",
         "sdo": "https://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "owl": "http://www.w3.org/2002/07/owl#",
