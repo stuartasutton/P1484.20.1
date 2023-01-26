@@ -323,7 +323,7 @@
             "sdo:rangeIncludes": "scd:CompetencyFramework"
         },
         {
-            "@id": "id",
+            "@id": "scd:id",
             "@type": "rdf:Property",
             "rdfs:label": {
                 "en-US": "ID"
