@@ -509,7 +509,7 @@
                 "en-US": "URL of the origin node in a ResourceAssociation."
             },
             "sdo:domainIncludes": "scd:ResourceAssociation",
-            "sdo:rangeIncludes": "scd:Resource"
+            "sdo:rangeIncludes": "rdfs:Resource"
         },
         {
             "@id": "scd:typeLabel",
