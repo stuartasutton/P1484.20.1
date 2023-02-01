@@ -122,11 +122,26 @@
                 "en-US": "Textual label for the category by which rubricCriterion may be grouped."
             },
             "skos:note": {
-                "en-US": "Comment: The data value may be expressed in multiple languages with no more than one instance per language."
+                "en-US": "The data value may be expressed in multiple languages with no more than one instance per language."
             },
             "sdo:domainIncludes": "scd:RubricCriterion",
             "sdo:rangeIncludes": "rdf:langString"
         },
+        {
+            "@id": "scd:competencyCategory",
+            "@type": "rdf:Property",
+            "rdfs:label": {
+                "en-US": "Competency Category"
+            },
+            "rdfs:comment": {
+                "en-US": "The textual label identifying the category of the competency as designated by the promulgating body."
+            },
+            "skos:note": {
+                "en-US": "This property points to a class, not to instances of that class. For example, where two competencies in a competency framework have been identified respectively by the promulgating agency as \"Strand: Renaissance\" and \"Strand: Social history\", the statementLabel for both these competencies is \"Strand\"."
+            },
+            "sdo:domainIncludes": "scd:CompetencyDefinition",
+            "sdo:rangeIncludes": "rdf:langString"
+        },       
         {
             "@id": "scd:competencyLevel",
             "@type": "rdf:Property",
@@ -164,7 +179,7 @@
                 "en-US": "Conforms To"
             },
             "rdfs:comment": {
-                "en-US": "Destination is an established standard to which the origin resource confomes."
+                "en-US": "Destination is an established standard to which the origin resource conformes."
             },
             "skos:note": {
                 "en-US": "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."

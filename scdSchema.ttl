@@ -48,10 +48,17 @@ scd:associationType a rdf:Property ;
 scd:category a rdf:Property ;
     rdfs:label "Category"@en-US ;
     rdfs:comment "Textual label for the category by which rubricCriterion may be grouped."@en-US ;
-    skos:note "Comment: The data value may be expressed in multiple languages with no more than one instance per language."@en-US ;
+    skos:note "The data value may be expressed in multiple languages with no more than one instance per language."@en-US ;
     sdo:domainIncludes scd:RubricCriterion ;
     sdo:rangeIncludes rdf:langString .
-
+    
+ceasn:competencyCategory a rdf:Property ;
+    rdfs:label "Competency Category"@en-US ;
+    rdfs:comment "The textual label identifying the category of the competency as designated by the promulgating body."@en-US ;
+    skos:note "This property points to a class, not to instances of that class. For example, where two competencies in a competency framework have been identified respectively by the promulgating agency as "Strand: Renaissance" and "Strand: Social history", the statementLabel for both these competencies is "Strand"."@en-US ;
+    sdo:domainIncludes scd:CompetencyDefinition ;
+    sdo:rangeIncludes rdf:langString .
+    
 scd:competencyLevel a rdf:Property ;
     rdfs:label "Competency Level"@en-US ;
     rdfs:comment "Resource identifying a level of competence or grade that is achieved in the referenced Rubric by this CompetencyDefinition."@en-US ;
@@ -67,7 +74,7 @@ scd:competencyStatement a rdf:Property ;
     
 scd:conformsTo a rdf:Property ;
     rdfs:label "Conforms To"@en-US ;
-    rdfs:comment "Destination is an established standard to which the origin resource confomes."@en-US ;
+    rdfs:comment "Destination is an established standard to which the origin resource conformes."@en-US ;
     skos:note "This term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on ResourceAssociation."@en-US ;
     owl:equivalentProperty dct:conformsTo ;
     sdo:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
@@ -119,7 +126,7 @@ scd:hasMember a rdf:Property ;
 
 scd:hasPart a rdf:Property ;
     rdfs:label "Has Part"@en-US ;
-    rdfs:comment "The destination competence is a part of the competence defined in this source."@en-US ;
+    rdfs:comment "Destination resource is a part of the resource defined in this source."@en-US ;
     skos:note """This may be used for example to declare that a \"task\" is part of a \"job\" OR  a \"skill\" is part of a \"task\" OR  a Measure of Effectiveness is part of a \"skill\" definition. This implies that all of the child objects define the parent object.\n\nThis term may be used as either a property on CompetencyDefinition or as a concept value of the associationType property on Resource++++Association."""@en-US ;
     sdo:domainIncludes scd:CompetencyDefinition, scd:ResourceAssociation ;
     sdo:rangeIncludes scd:CompetencyDefinition .
